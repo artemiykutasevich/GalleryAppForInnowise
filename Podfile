@@ -6,6 +6,7 @@ target 'GalleryAppForInnowise' do
   use_frameworks!
 
   # Pods for GalleryAppForInnowise
+  pod 'SwiftLint'
 
   target 'GalleryAppForInnowiseTests' do
     inherit! :search_paths
