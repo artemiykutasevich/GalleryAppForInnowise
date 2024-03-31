@@ -10,6 +10,11 @@
 		43CBB64AE308B87AC0A87E08 /* Pods_GalleryAppForInnowiseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8DA85F015DD66D72FAE8329 /* Pods_GalleryAppForInnowiseTests.framework */; };
 		94E585927C9D67EC7AE1781F /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FD044F804BC280D466D568 /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework */; };
 		B6B530C6C4470B3D7C5381D9 /* Pods_GalleryAppForInnowise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686B6C39408E038222649476 /* Pods_GalleryAppForInnowise.framework */; };
+		EA5B1BAA2BB98C3B00245FBC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BA92BB98C3B00245FBC /* Constants.swift */; };
+		EA5B1BB12BB9EC4600245FBC /* ImageGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB02BB9EC4600245FBC /* ImageGalleryViewController.swift */; };
+		EA5B1BB42BB9ECF100245FBC /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB32BB9ECF100245FBC /* ImageDetailViewController.swift */; };
+		EA5B1BB62BB9ED6100245FBC /* ImageGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB52BB9ED6100245FBC /* ImageGalleryViewModel.swift */; };
+		EA5B1BB82BB9ED8400245FBC /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB72BB9ED8400245FBC /* ImageDetailViewModel.swift */; };
 		EABF42842BB8848D004BA85A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF42832BB8848D004BA85A /* AppDelegate.swift */; };
 		EABF42862BB8848D004BA85A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF42852BB8848D004BA85A /* SceneDelegate.swift */; };
 		EABF42882BB8848D004BA85A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF42872BB8848D004BA85A /* ViewController.swift */; };
@@ -45,6 +50,12 @@
 		41FD044F804BC280D466D568 /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		686B6C39408E038222649476 /* Pods_GalleryAppForInnowise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryAppForInnowise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DA85F015DD66D72FAE8329 /* Pods_GalleryAppForInnowiseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryAppForInnowiseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA5B1BA92BB98C3B00245FBC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EA5B1BB02BB9EC4600245FBC /* ImageGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewController.swift; sourceTree = "<group>"; };
+		EA5B1BB32BB9ECF100245FBC /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
+		EA5B1BB52BB9ED6100245FBC /* ImageGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewModel.swift; sourceTree = "<group>"; };
+		EA5B1BB72BB9ED8400245FBC /* ImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModel.swift; sourceTree = "<group>"; };
+		EA5B1BB92BB9EF3A00245FBC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EABF42802BB8848D004BA85A /* GalleryAppForInnowise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryAppForInnowise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABF42832BB8848D004BA85A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EABF42852BB8848D004BA85A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,7 +64,7 @@
 		EABF428D2BB8848D004BA85A /* GalleryAppForInnowise.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GalleryAppForInnowise.xcdatamodel; sourceTree = "<group>"; };
 		EABF428F2BB8848D004BA85A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EABF42922BB8848D004BA85A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EABF42942BB8848D004BA85A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EABF42942BB8848D004BA85A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "GalleryAppForInnowise/Support Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		EABF42992BB8848E004BA85A /* GalleryAppForInnowiseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GalleryAppForInnowiseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABF429D2BB8848E004BA85A /* GalleryAppForInnowiseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryAppForInnowiseTests.swift; sourceTree = "<group>"; };
 		EABF42A32BB8848E004BA85A /* GalleryAppForInnowiseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GalleryAppForInnowiseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,9 +117,89 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EA5B1BA42BB987C200245FBC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				EA5B1BAF2BB9EC2300245FBC /* ImageGalleryScreen */,
+				EA5B1BB22BB9ECCB00245FBC /* ImageDetailScreen */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		EA5B1BA52BB98B1A00245FBC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EA5B1BA62BB98BBC00245FBC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		EA5B1BA72BB98BCA00245FBC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EABF42912BB8848D004BA85A /* LaunchScreen.storyboard */,
+				EABF42892BB8848D004BA85A /* Main.storyboard */,
+				EABF42872BB8848D004BA85A /* ViewController.swift */,
+				EABF428F2BB8848D004BA85A /* Assets.xcassets */,
+				EABF42942BB8848D004BA85A /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		EA5B1BA82BB98C1300245FBC /* General */ = {
+			isa = PBXGroup;
+			children = (
+				EABF42832BB8848D004BA85A /* AppDelegate.swift */,
+				EABF42852BB8848D004BA85A /* SceneDelegate.swift */,
+				EA5B1BA92BB98C3B00245FBC /* Constants.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		EA5B1BAB2BB999CE00245FBC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EA5B1BAC2BB999DD00245FBC /* CoreData */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EA5B1BAC2BB999DD00245FBC /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EABF428C2BB8848D004BA85A /* GalleryAppForInnowise.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		EA5B1BAF2BB9EC2300245FBC /* ImageGalleryScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EA5B1BB02BB9EC4600245FBC /* ImageGalleryViewController.swift */,
+				EA5B1BB52BB9ED6100245FBC /* ImageGalleryViewModel.swift */,
+			);
+			path = ImageGalleryScreen;
+			sourceTree = "<group>";
+		};
+		EA5B1BB22BB9ECCB00245FBC /* ImageDetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EA5B1BB32BB9ECF100245FBC /* ImageDetailViewController.swift */,
+				EA5B1BB72BB9ED8400245FBC /* ImageDetailViewModel.swift */,
+			);
+			path = ImageDetailScreen;
+			sourceTree = "<group>";
+		};
 		EABF42772BB8848C004BA85A = {
 			isa = PBXGroup;
 			children = (
+				EA5B1BB92BB9EF3A00245FBC /* README.md */,
 				EABF42822BB8848D004BA85A /* GalleryAppForInnowise */,
 				EABF429C2BB8848E004BA85A /* GalleryAppForInnowiseTests */,
 				EABF42A62BB8848E004BA85A /* GalleryAppForInnowiseUITests */,
@@ -131,14 +222,12 @@
 		EABF42822BB8848D004BA85A /* GalleryAppForInnowise */ = {
 			isa = PBXGroup;
 			children = (
-				EABF42832BB8848D004BA85A /* AppDelegate.swift */,
-				EABF42852BB8848D004BA85A /* SceneDelegate.swift */,
-				EABF42872BB8848D004BA85A /* ViewController.swift */,
-				EABF42892BB8848D004BA85A /* Main.storyboard */,
-				EABF428F2BB8848D004BA85A /* Assets.xcassets */,
-				EABF42912BB8848D004BA85A /* LaunchScreen.storyboard */,
-				EABF42942BB8848D004BA85A /* Info.plist */,
-				EABF428C2BB8848D004BA85A /* GalleryAppForInnowise.xcdatamodeld */,
+				EA5B1BA82BB98C1300245FBC /* General */,
+				EA5B1BA42BB987C200245FBC /* Modules */,
+				EA5B1BAB2BB999CE00245FBC /* Services */,
+				EA5B1BA62BB98BBC00245FBC /* Utilities */,
+				EA5B1BA52BB98B1A00245FBC /* Extensions */,
+				EA5B1BA72BB98BCA00245FBC /* Support Files */,
 			);
 			path = GalleryAppForInnowise;
 			sourceTree = "<group>";
@@ -391,8 +480,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5B1BB82BB9ED8400245FBC /* ImageDetailViewModel.swift in Sources */,
+				EA5B1BAA2BB98C3B00245FBC /* Constants.swift in Sources */,
 				EABF42882BB8848D004BA85A /* ViewController.swift in Sources */,
+				EA5B1BB42BB9ECF100245FBC /* ImageDetailViewController.swift in Sources */,
+				EA5B1BB12BB9EC4600245FBC /* ImageGalleryViewController.swift in Sources */,
 				EABF42842BB8848D004BA85A /* AppDelegate.swift in Sources */,
+				EA5B1BB62BB9ED6100245FBC /* ImageGalleryViewModel.swift in Sources */,
 				EABF428E2BB8848D004BA85A /* GalleryAppForInnowise.xcdatamodeld in Sources */,
 				EABF42862BB8848D004BA85A /* SceneDelegate.swift in Sources */,
 			);
@@ -579,7 +673,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5998BU97D3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GalleryAppForInnowise/Info.plist;
+				INFOPLIST_FILE = "GalleryAppForInnowise/Support Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -613,7 +707,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5998BU97D3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GalleryAppForInnowise/Info.plist;
+				INFOPLIST_FILE = "GalleryAppForInnowise/Support Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
