@@ -8,12 +8,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let provider: BaseProviderProtocol = BaseProvider() as BaseProviderProtocol
+        provider.getPage(with: 0, completion: { [weak self] answer in
+            switch answer {
+            case .success(let success):
+                print(success.count)
+            case .failure(let failure):
+                print(String(describing: failure))
+            }
+        })
     }
-
-
 }
 

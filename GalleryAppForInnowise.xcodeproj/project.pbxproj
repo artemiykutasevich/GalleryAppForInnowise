@@ -10,12 +10,20 @@
 		43CBB64AE308B87AC0A87E08 /* Pods_GalleryAppForInnowiseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8DA85F015DD66D72FAE8329 /* Pods_GalleryAppForInnowiseTests.framework */; };
 		94E585927C9D67EC7AE1781F /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FD044F804BC280D466D568 /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework */; };
 		B6B530C6C4470B3D7C5381D9 /* Pods_GalleryAppForInnowise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686B6C39408E038222649476 /* Pods_GalleryAppForInnowise.framework */; };
+		EA23D5EF2BBB262F0070E423 /* BaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA23D5EE2BBB262F0070E423 /* BaseProvider.swift */; };
+		EA23D5F22BBB26890070E423 /* UnsplashProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA23D5F12BBB26890070E423 /* UnsplashProvider.swift */; };
 		EA23D5F62BBB28B70070E423 /* PrivateConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA23D5F52BBB28B70070E423 /* PrivateConstants.swift */; };
 		EA5B1BAA2BB98C3B00245FBC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BA92BB98C3B00245FBC /* Constants.swift */; };
 		EA5B1BB12BB9EC4600245FBC /* ImageGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB02BB9EC4600245FBC /* ImageGalleryViewController.swift */; };
 		EA5B1BB42BB9ECF100245FBC /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB32BB9ECF100245FBC /* ImageDetailViewController.swift */; };
 		EA5B1BB62BB9ED6100245FBC /* ImageGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB52BB9ED6100245FBC /* ImageGalleryViewModel.swift */; };
 		EA5B1BB82BB9ED8400245FBC /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB72BB9ED8400245FBC /* ImageDetailViewModel.swift */; };
+		EA8198092BBB2D1400CFBCFE /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8198082BBB2D1400CFBCFE /* WebService.swift */; };
+		EA81980C2BBB2E1F00CFBCFE /* InternalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA81980B2BBB2E1F00CFBCFE /* InternalError.swift */; };
+		EA81980E2BBB2F1D00CFBCFE /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA81980D2BBB2F1D00CFBCFE /* Reachability.swift */; };
+		EA8198132BBB466700CFBCFE /* UnsplashModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8198122BBB466700CFBCFE /* UnsplashModels.swift */; };
+		EA8198152BBB49E300CFBCFE /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8198142BBB49E300CFBCFE /* RequestData.swift */; };
+		EA8198172BBB4D7400CFBCFE /* URLRequest + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8198162BBB4D7400CFBCFE /* URLRequest + Extensions.swift */; };
 		EABF42842BB8848D004BA85A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF42832BB8848D004BA85A /* AppDelegate.swift */; };
 		EABF42862BB8848D004BA85A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF42852BB8848D004BA85A /* SceneDelegate.swift */; };
 		EABF42882BB8848D004BA85A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF42872BB8848D004BA85A /* ViewController.swift */; };
@@ -51,6 +59,8 @@
 		41FD044F804BC280D466D568 /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		686B6C39408E038222649476 /* Pods_GalleryAppForInnowise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryAppForInnowise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DA85F015DD66D72FAE8329 /* Pods_GalleryAppForInnowiseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryAppForInnowiseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA23D5EE2BBB262F0070E423 /* BaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProvider.swift; sourceTree = "<group>"; };
+		EA23D5F12BBB26890070E423 /* UnsplashProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashProvider.swift; sourceTree = "<group>"; };
 		EA23D5F52BBB28B70070E423 /* PrivateConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateConstants.swift; sourceTree = "<group>"; };
 		EA5B1BA92BB98C3B00245FBC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EA5B1BB02BB9EC4600245FBC /* ImageGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +68,12 @@
 		EA5B1BB52BB9ED6100245FBC /* ImageGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewModel.swift; sourceTree = "<group>"; };
 		EA5B1BB72BB9ED8400245FBC /* ImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModel.swift; sourceTree = "<group>"; };
 		EA5B1BB92BB9EF3A00245FBC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EA8198082BBB2D1400CFBCFE /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		EA81980B2BBB2E1F00CFBCFE /* InternalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalError.swift; sourceTree = "<group>"; };
+		EA81980D2BBB2F1D00CFBCFE /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		EA8198122BBB466700CFBCFE /* UnsplashModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashModels.swift; sourceTree = "<group>"; };
+		EA8198142BBB49E300CFBCFE /* RequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestData.swift; sourceTree = "<group>"; };
+		EA8198162BBB4D7400CFBCFE /* URLRequest + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest + Extensions.swift"; sourceTree = "<group>"; };
 		EABF42802BB8848D004BA85A /* GalleryAppForInnowise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryAppForInnowise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABF42832BB8848D004BA85A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EABF42852BB8848D004BA85A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +135,42 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EA23D5ED2BBB25E90070E423 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				EA23D5EE2BBB262F0070E423 /* BaseProvider.swift */,
+				EA23D5F02BBB26770070E423 /* Providers */,
+				EA23D5F32BBB27A00070E423 /* WebServiceClasses */,
+				EA23D5F42BBB28020070E423 /* WebServiceModels */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		EA23D5F02BBB26770070E423 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				EA23D5F12BBB26890070E423 /* UnsplashProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		EA23D5F32BBB27A00070E423 /* WebServiceClasses */ = {
+			isa = PBXGroup;
+			children = (
+				EA8198082BBB2D1400CFBCFE /* WebService.swift */,
+			);
+			path = WebServiceClasses;
+			sourceTree = "<group>";
+		};
+		EA23D5F42BBB28020070E423 /* WebServiceModels */ = {
+			isa = PBXGroup;
+			children = (
+				EA8198122BBB466700CFBCFE /* UnsplashModels.swift */,
+				EA8198142BBB49E300CFBCFE /* RequestData.swift */,
+			);
+			path = WebServiceModels;
+			sourceTree = "<group>";
+		};
 		EA5B1BA42BB987C200245FBC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +183,7 @@
 		EA5B1BA52BB98B1A00245FBC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EA8198162BBB4D7400CFBCFE /* URLRequest + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -138,6 +191,7 @@
 		EA5B1BA62BB98BBC00245FBC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				EA81980D2BBB2F1D00CFBCFE /* Reachability.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -168,6 +222,8 @@
 		EA5B1BAB2BB999CE00245FBC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EA81980A2BBB2DE300CFBCFE /* ErrorHandling */,
+				EA23D5ED2BBB25E90070E423 /* WebService */,
 				EA5B1BAC2BB999DD00245FBC /* CoreData */,
 			);
 			path = Services;
@@ -197,6 +253,14 @@
 				EA5B1BB72BB9ED8400245FBC /* ImageDetailViewModel.swift */,
 			);
 			path = ImageDetailScreen;
+			sourceTree = "<group>";
+		};
+		EA81980A2BBB2DE300CFBCFE /* ErrorHandling */ = {
+			isa = PBXGroup;
+			children = (
+				EA81980B2BBB2E1F00CFBCFE /* InternalError.swift */,
+			);
+			path = ErrorHandling;
 			sourceTree = "<group>";
 		};
 		EABF42772BB8848C004BA85A = {
@@ -483,16 +547,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA8198092BBB2D1400CFBCFE /* WebService.swift in Sources */,
 				EA5B1BB82BB9ED8400245FBC /* ImageDetailViewModel.swift in Sources */,
+				EA8198132BBB466700CFBCFE /* UnsplashModels.swift in Sources */,
 				EA23D5F62BBB28B70070E423 /* PrivateConstants.swift in Sources */,
 				EA5B1BAA2BB98C3B00245FBC /* Constants.swift in Sources */,
 				EABF42882BB8848D004BA85A /* ViewController.swift in Sources */,
+				EA81980C2BBB2E1F00CFBCFE /* InternalError.swift in Sources */,
 				EA5B1BB42BB9ECF100245FBC /* ImageDetailViewController.swift in Sources */,
 				EA5B1BB12BB9EC4600245FBC /* ImageGalleryViewController.swift in Sources */,
+				EA81980E2BBB2F1D00CFBCFE /* Reachability.swift in Sources */,
 				EABF42842BB8848D004BA85A /* AppDelegate.swift in Sources */,
 				EA5B1BB62BB9ED6100245FBC /* ImageGalleryViewModel.swift in Sources */,
+				EA23D5F22BBB26890070E423 /* UnsplashProvider.swift in Sources */,
+				EA8198172BBB4D7400CFBCFE /* URLRequest + Extensions.swift in Sources */,
 				EABF428E2BB8848D004BA85A /* GalleryAppForInnowise.xcdatamodeld in Sources */,
+				EA8198152BBB49E300CFBCFE /* RequestData.swift in Sources */,
 				EABF42862BB8848D004BA85A /* SceneDelegate.swift in Sources */,
+				EA23D5EF2BBB262F0070E423 /* BaseProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
