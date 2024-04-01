@@ -10,6 +10,7 @@
 		43CBB64AE308B87AC0A87E08 /* Pods_GalleryAppForInnowiseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8DA85F015DD66D72FAE8329 /* Pods_GalleryAppForInnowiseTests.framework */; };
 		94E585927C9D67EC7AE1781F /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FD044F804BC280D466D568 /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework */; };
 		B6B530C6C4470B3D7C5381D9 /* Pods_GalleryAppForInnowise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686B6C39408E038222649476 /* Pods_GalleryAppForInnowise.framework */; };
+		EA23D5F62BBB28B70070E423 /* PrivateConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA23D5F52BBB28B70070E423 /* PrivateConstants.swift */; };
 		EA5B1BAA2BB98C3B00245FBC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BA92BB98C3B00245FBC /* Constants.swift */; };
 		EA5B1BB12BB9EC4600245FBC /* ImageGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB02BB9EC4600245FBC /* ImageGalleryViewController.swift */; };
 		EA5B1BB42BB9ECF100245FBC /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB32BB9ECF100245FBC /* ImageDetailViewController.swift */; };
@@ -50,6 +51,7 @@
 		41FD044F804BC280D466D568 /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		686B6C39408E038222649476 /* Pods_GalleryAppForInnowise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryAppForInnowise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DA85F015DD66D72FAE8329 /* Pods_GalleryAppForInnowiseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryAppForInnowiseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA23D5F52BBB28B70070E423 /* PrivateConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateConstants.swift; sourceTree = "<group>"; };
 		EA5B1BA92BB98C3B00245FBC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EA5B1BB02BB9EC4600245FBC /* ImageGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewController.swift; sourceTree = "<group>"; };
 		EA5B1BB32BB9ECF100245FBC /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				EABF42832BB8848D004BA85A /* AppDelegate.swift */,
 				EABF42852BB8848D004BA85A /* SceneDelegate.swift */,
 				EA5B1BA92BB98C3B00245FBC /* Constants.swift */,
+				EA23D5F52BBB28B70070E423 /* PrivateConstants.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA5B1BB82BB9ED8400245FBC /* ImageDetailViewModel.swift in Sources */,
+				EA23D5F62BBB28B70070E423 /* PrivateConstants.swift in Sources */,
 				EA5B1BAA2BB98C3B00245FBC /* Constants.swift in Sources */,
 				EABF42882BB8848D004BA85A /* ViewController.swift in Sources */,
 				EA5B1BB42BB9ECF100245FBC /* ImageDetailViewController.swift in Sources */,
