@@ -18,6 +18,7 @@
 		EA5B1BB42BB9ECF100245FBC /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB32BB9ECF100245FBC /* ImageDetailViewController.swift */; };
 		EA5B1BB62BB9ED6100245FBC /* ImageGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB52BB9ED6100245FBC /* ImageGalleryViewModel.swift */; };
 		EA5B1BB82BB9ED8400245FBC /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB72BB9ED8400245FBC /* ImageDetailViewModel.swift */; };
+		EA637BC32BBC9DB800EB3FB7 /* BenchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA637BC22BBC9DB800EB3FB7 /* BenchTimer.swift */; };
 		EA8198092BBB2D1400CFBCFE /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8198082BBB2D1400CFBCFE /* WebService.swift */; };
 		EA81980C2BBB2E1F00CFBCFE /* InternalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA81980B2BBB2E1F00CFBCFE /* InternalError.swift */; };
 		EA81980E2BBB2F1D00CFBCFE /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA81980D2BBB2F1D00CFBCFE /* Reachability.swift */; };
@@ -68,6 +69,7 @@
 		EA5B1BB52BB9ED6100245FBC /* ImageGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewModel.swift; sourceTree = "<group>"; };
 		EA5B1BB72BB9ED8400245FBC /* ImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModel.swift; sourceTree = "<group>"; };
 		EA5B1BB92BB9EF3A00245FBC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EA637BC22BBC9DB800EB3FB7 /* BenchTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchTimer.swift; sourceTree = "<group>"; };
 		EA8198082BBB2D1400CFBCFE /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		EA81980B2BBB2E1F00CFBCFE /* InternalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalError.swift; sourceTree = "<group>"; };
 		EA81980D2BBB2F1D00CFBCFE /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				EA81980D2BBB2F1D00CFBCFE /* Reachability.swift */,
+				EA637BC22BBC9DB800EB3FB7 /* BenchTimer.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				EA81980C2BBB2E1F00CFBCFE /* InternalError.swift in Sources */,
 				EA5B1BB42BB9ECF100245FBC /* ImageDetailViewController.swift in Sources */,
 				EA5B1BB12BB9EC4600245FBC /* ImageGalleryViewController.swift in Sources */,
+				EA637BC32BBC9DB800EB3FB7 /* BenchTimer.swift in Sources */,
 				EA81980E2BBB2F1D00CFBCFE /* Reachability.swift in Sources */,
 				EABF42842BB8848D004BA85A /* AppDelegate.swift in Sources */,
 				EA5B1BB62BB9ED6100245FBC /* ImageGalleryViewModel.swift in Sources */,
