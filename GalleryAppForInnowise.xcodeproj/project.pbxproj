@@ -30,7 +30,6 @@
 		EA8198152BBB49E300CFBCFE /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8198142BBB49E300CFBCFE /* RequestData.swift */; };
 		EA8198172BBB4D7400CFBCFE /* URLRequest + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8198162BBB4D7400CFBCFE /* URLRequest + Extensions.swift */; };
 		EABF42842BB8848D004BA85A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF42832BB8848D004BA85A /* AppDelegate.swift */; };
-		EABF42862BB8848D004BA85A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF42852BB8848D004BA85A /* SceneDelegate.swift */; };
 		EABF42882BB8848D004BA85A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF42872BB8848D004BA85A /* ViewController.swift */; };
 		EABF428B2BB8848D004BA85A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EABF428A2BB8848D004BA85A /* Base */; };
 		EABF428E2BB8848D004BA85A /* GalleryAppForInnowise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EABF428C2BB8848D004BA85A /* GalleryAppForInnowise.xcdatamodeld */; };
@@ -86,7 +85,6 @@
 		EA8198162BBB4D7400CFBCFE /* URLRequest + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest + Extensions.swift"; sourceTree = "<group>"; };
 		EABF42802BB8848D004BA85A /* GalleryAppForInnowise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryAppForInnowise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABF42832BB8848D004BA85A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EABF42852BB8848D004BA85A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EABF42872BB8848D004BA85A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EABF428A2BB8848D004BA85A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EABF428D2BB8848D004BA85A /* GalleryAppForInnowise.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GalleryAppForInnowise.xcdatamodel; sourceTree = "<group>"; };
@@ -224,7 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				EABF42832BB8848D004BA85A /* AppDelegate.swift */,
-				EABF42852BB8848D004BA85A /* SceneDelegate.swift */,
 				EA5B1BA92BB98C3B00245FBC /* Constants.swift */,
 				EA637BC62BBCB2B000EB3FB7 /* PrivateConstants.swift */,
 			);
@@ -591,7 +588,6 @@
 				EA8198172BBB4D7400CFBCFE /* URLRequest + Extensions.swift in Sources */,
 				EABF428E2BB8848D004BA85A /* GalleryAppForInnowise.xcdatamodeld in Sources */,
 				EA8198152BBB49E300CFBCFE /* RequestData.swift in Sources */,
-				EABF42862BB8848D004BA85A /* SceneDelegate.swift in Sources */,
 				EA23D5EF2BBB262F0070E423 /* BaseProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
