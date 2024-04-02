@@ -7,4 +7,14 @@
 
 import Foundation
 
-final class ImageGalleryViewModel {}
+// MARK: - ImageGalleryViewModelProtocol
+
+protocol ImageGalleryViewModelProtocol {}
+
+// MARK: - ImageGalleryViewModel
+
+final class ImageGalleryViewModel {
+    weak var view: ImageGalleryViewControllerProtocol?
+}
+
+extension ImageGalleryViewModel: ImageGalleryViewModelProtocol {}
