@@ -12,5 +12,5 @@ protocol BaseProviderProtocol: UnsplashProviderProtocol, ImageDownloadProviderPr
 // MARK: - BaseProvider
 
 final class BaseProvider: BaseProviderProtocol {
-    lazy var webService: WebServiceProtocol = WebService()
+    lazy var webService: WebServiceProtocol = serviceLocator.getService()
 }
