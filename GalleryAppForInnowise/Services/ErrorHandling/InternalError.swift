@@ -11,8 +11,10 @@ enum InternalError: Error {
     case incorectRequest
     case incorectJSON
     case incorectResponse
+    case incorectData
     case notAuthorizedException
     case noInternetConnection
     case emptyData
     case serverError
+    case clientError
 }

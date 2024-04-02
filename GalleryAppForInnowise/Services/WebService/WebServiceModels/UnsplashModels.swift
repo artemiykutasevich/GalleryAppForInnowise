@@ -9,6 +9,8 @@ import Foundation
 
 typealias UnsplasPage = [UnsplashPageItem]
 
+// swiftlint:disable all
+
 // MARK: - UnsplashPage
 
 struct UnsplashPageItem: Codable {
@@ -18,8 +20,8 @@ struct UnsplashPageItem: Codable {
 //    let createdAt: Date
 //    let updatedAt: Date
 //    let promotedAt: Date?
-//    let width: Int
-//    let height: Int
+    let width: Int
+    let height: Int
 //    let color: String
 //    let blurHash: String
 //    let description: String?
@@ -34,20 +36,19 @@ struct UnsplashPageItem: Codable {
 //    let topicSubmissions: UnsplashTopicSubmissions
 //    let assetType: UnsplashAssetType
 //    let user: UnsplashUser
-    
+
     enum CodingKeys: String, CodingKey {
-        case id
+        case id, urls, links, width, height
 //        case slug
 //        case alternativeSlugs = "alternative_slugs"
 //        case createdAt = "created_at"
 //        case updatedAt = "updated_at"
 //        case promotedAt = "promoted_at"
-//        case width, height, color
+//        case color
 //        case blurHash = "blur_hash"
 //        case description
 //        case altDescription = "alt_description"
 //        case breadcrumbs
-        case urls, links
 //        case likes
 //        case likedByUser = "liked_by_user"
 //        case currentUserCollections = "current_user_collections"
@@ -74,10 +75,10 @@ enum UnsplashAssetType: String, Codable {
 
 struct UnsplashLinks: Codable {
     let linksSelf, html, download, downloadLocation: String
-    
+
     enum CodingKeys: String, CodingKey {
-        case linksSelf = "self"
         case html, download
+        case linksSelf = "self"
         case downloadLocation = "download_location"
     }
 }
@@ -89,12 +90,11 @@ struct UnsplashSponsorship: Codable {
     let tagline: String
     let taglineURL: String
     let sponsor: UnsplashUser
-    
+
     enum CodingKeys: String, CodingKey {
+        case tagline, sponsor
         case impressionUrls = "impression_urls"
-        case tagline
         case taglineURL = "tagline_url"
-        case sponsor
     }
 }
 
@@ -114,7 +114,7 @@ struct UnsplashUser: Codable {
     let totalCollections, totalLikes, totalPhotos, totalPromotedPhotos: Int
     let acceptedTos, forHire: Bool
     let social: UnsplashSocial
-    
+
     enum CodingKeys: String, CodingKey {
         case id
         case updatedAt = "updated_at"
@@ -139,9 +139,8 @@ struct UnsplashUser: Codable {
 // MARK: - UnsplashUserLinks
 
 struct UnsplashUserLinks: Codable {
-    let linksSelf, html, photos, likes: String
-    let portfolio, following, followers: String
-    
+    let linksSelf, html, photos, likes, portfolio, following, followers: String
+
     enum CodingKeys: String, CodingKey {
         case linksSelf = "self"
         case html, photos, likes, portfolio, following, followers
@@ -161,7 +160,7 @@ struct UnsplashSocial: Codable {
     let portfolioURL: String?
     let twitterUsername: String?
     let paypalEmail: JSONNull?
-    
+
     enum CodingKeys: String, CodingKey {
         case instagramUsername = "instagram_username"
         case portfolioURL = "portfolio_url"
@@ -173,13 +172,11 @@ struct UnsplashSocial: Codable {
 // MARK: - UnsplashTopicSubmissions
 
 struct UnsplashTopicSubmissions: Codable {
-    let travel, health, businessWork, spirituality: UnsplashBusinessWork?
-    let people: UnsplashBusinessWork?
-    
+    let travel, health, businessWork, spirituality, people: UnsplashBusinessWork?
+
     enum CodingKeys: String, CodingKey {
-        case travel, health
+        case travel, health, spirituality, people
         case businessWork = "business-work"
-        case spirituality, people
     }
 }
 
@@ -188,7 +185,7 @@ struct UnsplashTopicSubmissions: Codable {
 struct UnsplashBusinessWork: Codable {
     let status: String
     let approvedOn: Date
-    
+
     enum CodingKeys: String, CodingKey {
         case status
         case approvedOn = "approved_on"
@@ -198,9 +195,8 @@ struct UnsplashBusinessWork: Codable {
 // MARK: - UnsplashUrls
 
 struct UnsplashUrls: Codable {
-    let raw, full, regular, small: String
-    let thumb, smallS3: String
-    
+    let raw, full, regular, small, thumb, smallS3: String
+
     enum CodingKeys: String, CodingKey {
         case raw, full, regular, small, thumb
         case smallS3 = "small_s3"
@@ -210,24 +206,24 @@ struct UnsplashUrls: Codable {
 // MARK: - Encode/decode helpers
 
 class JSONNull: Codable, Hashable {
-    
+
     public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
         return true
     }
-    
+
     public var hashValue: Int {
         return 0
     }
-    
+
     public init() {}
-    
+
     public required init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         if !container.decodeNil() {
             throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
         }
     }
-    
+
     public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         try container.encodeNil()
@@ -236,38 +232,38 @@ class JSONNull: Codable, Hashable {
 
 class JSONCodingKey: CodingKey {
     let key: String
-    
+
     required init?(intValue: Int) {
         return nil
     }
-    
+
     required init?(stringValue: String) {
         key = stringValue
     }
-    
+
     var intValue: Int? {
         return nil
     }
-    
+
     var stringValue: String {
         return key
     }
 }
 
 class JSONAny: Codable {
-    
+
     let value: Any
-    
+
     static func decodingError(forCodingPath codingPath: [CodingKey]) -> DecodingError {
         let context = DecodingError.Context(codingPath: codingPath, debugDescription: "Cannot decode JSONAny")
         return DecodingError.typeMismatch(JSONAny.self, context)
     }
-    
+
     static func encodingError(forValue value: Any, codingPath: [CodingKey]) -> EncodingError {
         let context = EncodingError.Context(codingPath: codingPath, debugDescription: "Cannot encode JSONAny")
         return EncodingError.invalidValue(value, context)
     }
-    
+
     static func decode(from container: SingleValueDecodingContainer) throws -> Any {
         if let value = try? container.decode(Bool.self) {
             return value
@@ -286,7 +282,7 @@ class JSONAny: Codable {
         }
         throw decodingError(forCodingPath: container.codingPath)
     }
-    
+
     static func decode(from container: inout UnkeyedDecodingContainer) throws -> Any {
         if let value = try? container.decode(Bool.self) {
             return value
@@ -313,7 +309,7 @@ class JSONAny: Codable {
         }
         throw decodingError(forCodingPath: container.codingPath)
     }
-    
+
     static func decode(from container: inout KeyedDecodingContainer<JSONCodingKey>, forKey key: JSONCodingKey) throws -> Any {
         if let value = try? container.decode(Bool.self, forKey: key) {
             return value
@@ -340,7 +336,7 @@ class JSONAny: Codable {
         }
         throw decodingError(forCodingPath: container.codingPath)
     }
-    
+
     static func decodeArray(from container: inout UnkeyedDecodingContainer) throws -> [Any] {
         var arr: [Any] = []
         while !container.isAtEnd {
@@ -349,7 +345,7 @@ class JSONAny: Codable {
         }
         return arr
     }
-    
+
     static func decodeDictionary(from container: inout KeyedDecodingContainer<JSONCodingKey>) throws -> [String: Any] {
         var dict = [String: Any]()
         for key in container.allKeys {
@@ -358,7 +354,7 @@ class JSONAny: Codable {
         }
         return dict
     }
-    
+
     static func encode(to container: inout UnkeyedEncodingContainer, array: [Any]) throws {
         for value in array {
             if let value = value as? Bool {
@@ -382,7 +378,7 @@ class JSONAny: Codable {
             }
         }
     }
-    
+
     static func encode(to container: inout KeyedEncodingContainer<JSONCodingKey>, dictionary: [String: Any]) throws {
         for (key, value) in dictionary {
             let key = JSONCodingKey(stringValue: key)!
@@ -407,7 +403,7 @@ class JSONAny: Codable {
             }
         }
     }
-    
+
     static func encode(to container: inout SingleValueEncodingContainer, value: Any) throws {
         if let value = value as? Bool {
             try container.encode(value)
@@ -423,7 +419,7 @@ class JSONAny: Codable {
             throw encodingError(forValue: value, codingPath: container.codingPath)
         }
     }
-    
+
     public required init(from decoder: Decoder) throws {
         if var arrayContainer = try? decoder.unkeyedContainer() {
             self.value = try JSONAny.decodeArray(from: &arrayContainer)
@@ -434,7 +430,7 @@ class JSONAny: Codable {
             self.value = try JSONAny.decode(from: container)
         }
     }
-    
+
     public func encode(to encoder: Encoder) throws {
         if let arr = self.value as? [Any] {
             var container = encoder.unkeyedContainer()
@@ -448,3 +444,5 @@ class JSONAny: Codable {
         }
     }
 }
+
+// swiftlint:enable all

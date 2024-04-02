@@ -12,15 +12,22 @@ struct RequestData {
     let httpMethod: HTTPMEthod
     let parametres: RequestParametres
     let headers: RequestHeaders
+    
+    init(endPoint: String, httpMethod: HTTPMEthod = .get, parametres: RequestParametres = [:], headers: RequestHeaders = [:]) {
+        self.endPoint = endPoint
+        self.httpMethod = httpMethod
+        self.parametres = parametres
+        self.headers = headers
+    }
 }
 
 enum HTTPMEthod {
     case get
-    
+
     var name: String {
         return String(describing: self).uppercased()
     }
 }
 
-typealias RequestParametres = [String : Any]
-typealias RequestHeaders = [String : String]
+typealias RequestParametres = [String: Any]
+typealias RequestHeaders = [String: String]

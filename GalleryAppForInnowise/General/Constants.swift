@@ -15,3 +15,5 @@ final class Constants {
         static let itemsPerPage: Int = 30
     }
 }
+
+typealias RequestAnswer = (data: Data?, response: URLResponse?, error: (any Error)?)

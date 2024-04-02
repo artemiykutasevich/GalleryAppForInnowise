@@ -19,6 +19,7 @@
 		EA5B1BB62BB9ED6100245FBC /* ImageGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB52BB9ED6100245FBC /* ImageGalleryViewModel.swift */; };
 		EA5B1BB82BB9ED8400245FBC /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB72BB9ED8400245FBC /* ImageDetailViewModel.swift */; };
 		EA637BC32BBC9DB800EB3FB7 /* BenchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA637BC22BBC9DB800EB3FB7 /* BenchTimer.swift */; };
+		EA637BC52BBCA81C00EB3FB7 /* ImageDownloadProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA637BC42BBCA81C00EB3FB7 /* ImageDownloadProvider.swift */; };
 		EA8198092BBB2D1400CFBCFE /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8198082BBB2D1400CFBCFE /* WebService.swift */; };
 		EA81980C2BBB2E1F00CFBCFE /* InternalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA81980B2BBB2E1F00CFBCFE /* InternalError.swift */; };
 		EA81980E2BBB2F1D00CFBCFE /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA81980D2BBB2F1D00CFBCFE /* Reachability.swift */; };
@@ -70,6 +71,7 @@
 		EA5B1BB72BB9ED8400245FBC /* ImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModel.swift; sourceTree = "<group>"; };
 		EA5B1BB92BB9EF3A00245FBC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EA637BC22BBC9DB800EB3FB7 /* BenchTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchTimer.swift; sourceTree = "<group>"; };
+		EA637BC42BBCA81C00EB3FB7 /* ImageDownloadProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadProvider.swift; sourceTree = "<group>"; };
 		EA8198082BBB2D1400CFBCFE /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		EA81980B2BBB2E1F00CFBCFE /* InternalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalError.swift; sourceTree = "<group>"; };
 		EA81980D2BBB2F1D00CFBCFE /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				EA23D5F12BBB26890070E423 /* UnsplashProvider.swift */,
+				EA637BC42BBCA81C00EB3FB7 /* ImageDownloadProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				EA5B1BB82BB9ED8400245FBC /* ImageDetailViewModel.swift in Sources */,
 				EA8198132BBB466700CFBCFE /* UnsplashModels.swift in Sources */,
 				EA23D5F62BBB28B70070E423 /* PrivateConstants.swift in Sources */,
+				EA637BC52BBCA81C00EB3FB7 /* ImageDownloadProvider.swift in Sources */,
 				EA5B1BAA2BB98C3B00245FBC /* Constants.swift in Sources */,
 				EABF42882BB8848D004BA85A /* ViewController.swift in Sources */,
 				EA81980C2BBB2E1F00CFBCFE /* InternalError.swift in Sources */,

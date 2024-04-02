@@ -15,10 +15,8 @@ protocol UnsplashProviderProtocol {
 
 extension BaseProvider: UnsplashProviderProtocol {
     func getPage(with number: Int, completion: @escaping (Result<UnsplasPage, InternalError>) -> Void) {
-        
-        // TODO: fix parametres
         let requestData = RequestData(
-            endPoint: "https://api.unsplash.com/photos?client_id=\(Constants.Unsplash.accessKey)&page=\(number)&per_page\(Constants.Unsplash.itemsPerPage)",
+            endPoint: "https://api.unsplash.com/photos",
             httpMethod: .get,
             parametres: [
                 "client_id": Constants.Unsplash.accessKey,
