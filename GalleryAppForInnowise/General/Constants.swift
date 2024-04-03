@@ -17,3 +17,5 @@ final class Constants {
 }
 
 typealias RequestAnswer = (data: Data?, response: URLResponse?, error: (any Error)?)
+typealias RequestParametres = [String: Any]
+typealias RequestHeaders = [String: String]

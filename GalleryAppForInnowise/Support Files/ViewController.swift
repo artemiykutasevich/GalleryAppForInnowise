@@ -11,16 +11,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let provider = BaseProvider()
-        pageDownloading(provider: provider) { [weak self] result in
-            guard let self else { return }
-            switch result {
-            case .success(let page):
-                imagesDownloading(provider: provider, page: page)
-            case .failure(let error):
-                break
-            }
-        }
+//        let provider = BaseProvider()
+//        pageDownloading(provider: provider) { [weak self] result in
+//            guard let self else { return }
+//            switch result {
+//            case .success(let page):
+//                imagesDownloading(provider: provider, page: page)
+//            case .failure(let error):
+//                break
+//            }
+//        }
     }
 
     private func pageDownloading(provider: UnsplashProviderProtocol, completion: @escaping (Result<UnsplasPage, InternalError>) -> Void) {
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
             DispatchQueue.main.async {
                 provider.downloadImage(fromURL: pageItem.urls.small) { pageResult in
                     switch pageResult {
-                    case .success(let image):
+                    case .success(_):
                         debugPrint("✅ image download success")
                     case .failure(let error):
                         debugPrint("❌ image download error: \(error.localizedDescription)")

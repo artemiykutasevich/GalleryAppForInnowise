@@ -33,11 +33,13 @@ extension WebService: WebServiceProtocol {
             completion(.failure(.incorectURL))
             return
         }
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        debugPrint("▶️ downloading")
+        let timer = BenchTimer()
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            debugPrint("⏸️ downloading end in: \(timer.stop())")
             let requestAnswer: RequestAnswer = (data, response, error)
             self.handleResponse(requestAnswer: requestAnswer, responseHandler: completion)
-        }
-        task.resume()
+        }.resume()
     }
 
     func perform(requestData: RequestData, completion: @escaping (Result<UIImage, InternalError>) -> Void) {
@@ -49,11 +51,13 @@ extension WebService: WebServiceProtocol {
             completion(.failure(.incorectURL))
             return
         }
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        debugPrint("▶️ downloading")
+        let timer = BenchTimer()
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            debugPrint("⏸️ downloading end in: \(timer.stop())")
             let requestAnswer: RequestAnswer = (data, response, error)
             self.handleResponse(requestAnswer: requestAnswer, responseHandler: completion)
-        }
-        task.resume()
+        }.resume()
     }
 }
 

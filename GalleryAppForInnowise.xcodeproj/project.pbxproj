@@ -20,6 +20,9 @@
 		EA637BC32BBC9DB800EB3FB7 /* BenchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA637BC22BBC9DB800EB3FB7 /* BenchTimer.swift */; };
 		EA637BC52BBCA81C00EB3FB7 /* ImageDownloadProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA637BC42BBCA81C00EB3FB7 /* ImageDownloadProvider.swift */; };
 		EA637BC72BBCB2B000EB3FB7 /* PrivateConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA637BC62BBCB2B000EB3FB7 /* PrivateConstants.swift */; };
+		EA637BCA2BBCB47400EB3FB7 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA637BC92BBCB47400EB3FB7 /* MainRouter.swift */; };
+		EA637BCC2BBCB59200EB3FB7 /* ImageGalleryModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA637BCB2BBCB59200EB3FB7 /* ImageGalleryModuleConfigurator.swift */; };
+		EA637BCE2BBCB8C300EB3FB7 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA637BCD2BBCB8C300EB3FB7 /* ServiceLocator.swift */; };
 		EA8198092BBB2D1400CFBCFE /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8198082BBB2D1400CFBCFE /* WebService.swift */; };
 		EA81980C2BBB2E1F00CFBCFE /* InternalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA81980B2BBB2E1F00CFBCFE /* InternalError.swift */; };
 		EA81980E2BBB2F1D00CFBCFE /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA81980D2BBB2F1D00CFBCFE /* Reachability.swift */; };
@@ -27,7 +30,6 @@
 		EA8198152BBB49E300CFBCFE /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8198142BBB49E300CFBCFE /* RequestData.swift */; };
 		EA8198172BBB4D7400CFBCFE /* URLRequest + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8198162BBB4D7400CFBCFE /* URLRequest + Extensions.swift */; };
 		EABF42842BB8848D004BA85A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF42832BB8848D004BA85A /* AppDelegate.swift */; };
-		EABF42862BB8848D004BA85A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF42852BB8848D004BA85A /* SceneDelegate.swift */; };
 		EABF42882BB8848D004BA85A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF42872BB8848D004BA85A /* ViewController.swift */; };
 		EABF428B2BB8848D004BA85A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EABF428A2BB8848D004BA85A /* Base */; };
 		EABF428E2BB8848D004BA85A /* GalleryAppForInnowise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EABF428C2BB8848D004BA85A /* GalleryAppForInnowise.xcdatamodeld */; };
@@ -36,6 +38,17 @@
 		EABF429E2BB8848E004BA85A /* GalleryAppForInnowiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF429D2BB8848E004BA85A /* GalleryAppForInnowiseTests.swift */; };
 		EABF42A82BB8848E004BA85A /* GalleryAppForInnowiseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF42A72BB8848E004BA85A /* GalleryAppForInnowiseUITests.swift */; };
 		EABF42AA2BB8848E004BA85A /* GalleryAppForInnowiseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF42A92BB8848E004BA85A /* GalleryAppForInnowiseUITestsLaunchTests.swift */; };
+		EAC584B32BBD9D0B001BD988 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC584B22BBD9D0B001BD988 /* PinterestLayout.swift */; };
+		EAC584B52BBD9E00001BD988 /* ImageGalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC584B42BBD9E00001BD988 /* ImageGalleryViewController.xib */; };
+		EAC584B92BBDA1C3001BD988 /* ImageGalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC584B82BBDA1C3001BD988 /* ImageGalleryCell.xib */; };
+		EAC584BA2BBDA1C3001BD988 /* ImageGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC584B72BBDA1C3001BD988 /* ImageGalleryCell.swift */; };
+		EAC584BC2BBDBED3001BD988 /* UICollectionView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC584BB2BBDBED3001BD988 /* UICollectionView + Extensions.swift */; };
+		EAC584BE2BBDBEFF001BD988 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC584BD2BBDBEFF001BD988 /* ReusableView.swift */; };
+		EAC584C02BBDBF65001BD988 /* NibBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC584BF2BBDBF65001BD988 /* NibBased.swift */; };
+		EAC584C32BBDBFDE001BD988 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC584C22BBDBFDE001BD988 /* BaseCollectionViewCell.swift */; };
+		EAC584C52BBDC04E001BD988 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC584C42BBDC04E001BD988 /* BaseViewController.swift */; };
+		EAC584C72BBDC123001BD988 /* Int + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC584C62BBDC123001BD988 /* Int + Extensions.swift */; };
+		EAC584C92BBDC6DB001BD988 /* ScaleFactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC584C82BBDC6DB001BD988 /* ScaleFactor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +85,9 @@
 		EA637BC22BBC9DB800EB3FB7 /* BenchTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchTimer.swift; sourceTree = "<group>"; };
 		EA637BC42BBCA81C00EB3FB7 /* ImageDownloadProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadProvider.swift; sourceTree = "<group>"; };
 		EA637BC62BBCB2B000EB3FB7 /* PrivateConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateConstants.swift; sourceTree = "<group>"; };
+		EA637BC92BBCB47400EB3FB7 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		EA637BCB2BBCB59200EB3FB7 /* ImageGalleryModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryModuleConfigurator.swift; sourceTree = "<group>"; };
+		EA637BCD2BBCB8C300EB3FB7 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		EA8198082BBB2D1400CFBCFE /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		EA81980B2BBB2E1F00CFBCFE /* InternalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalError.swift; sourceTree = "<group>"; };
 		EA81980D2BBB2F1D00CFBCFE /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -80,7 +96,6 @@
 		EA8198162BBB4D7400CFBCFE /* URLRequest + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest + Extensions.swift"; sourceTree = "<group>"; };
 		EABF42802BB8848D004BA85A /* GalleryAppForInnowise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryAppForInnowise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABF42832BB8848D004BA85A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EABF42852BB8848D004BA85A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EABF42872BB8848D004BA85A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EABF428A2BB8848D004BA85A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EABF428D2BB8848D004BA85A /* GalleryAppForInnowise.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GalleryAppForInnowise.xcdatamodel; sourceTree = "<group>"; };
@@ -92,6 +107,17 @@
 		EABF42A32BB8848E004BA85A /* GalleryAppForInnowiseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GalleryAppForInnowiseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABF42A72BB8848E004BA85A /* GalleryAppForInnowiseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryAppForInnowiseUITests.swift; sourceTree = "<group>"; };
 		EABF42A92BB8848E004BA85A /* GalleryAppForInnowiseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryAppForInnowiseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EAC584B22BBD9D0B001BD988 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		EAC584B42BBD9E00001BD988 /* ImageGalleryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageGalleryViewController.xib; sourceTree = "<group>"; };
+		EAC584B72BBDA1C3001BD988 /* ImageGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryCell.swift; sourceTree = "<group>"; };
+		EAC584B82BBDA1C3001BD988 /* ImageGalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageGalleryCell.xib; sourceTree = "<group>"; };
+		EAC584BB2BBDBED3001BD988 /* UICollectionView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView + Extensions.swift"; sourceTree = "<group>"; };
+		EAC584BD2BBDBEFF001BD988 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		EAC584BF2BBDBF65001BD988 /* NibBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibBased.swift; sourceTree = "<group>"; };
+		EAC584C22BBDBFDE001BD988 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		EAC584C42BBDC04E001BD988 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		EAC584C62BBDC123001BD988 /* Int + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Extensions.swift"; sourceTree = "<group>"; };
+		EAC584C82BBDC6DB001BD988 /* ScaleFactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleFactor.swift; sourceTree = "<group>"; };
 		F48245F2C26964D917F35D3C /* Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.release.xcconfig"; path = "Target Support Files/Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests/Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F8F24FACA78B2B940E8F8108 /* Pods-GalleryAppForInnowiseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryAppForInnowiseTests.debug.xcconfig"; path = "Target Support Files/Pods-GalleryAppForInnowiseTests/Pods-GalleryAppForInnowiseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F9D9C62D79CDCA554B7B362C /* Pods-GalleryAppForInnowise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryAppForInnowise.debug.xcconfig"; path = "Target Support Files/Pods-GalleryAppForInnowise/Pods-GalleryAppForInnowise.debug.xcconfig"; sourceTree = "<group>"; };
@@ -188,6 +214,8 @@
 		EA5B1BA52BB98B1A00245FBC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EAC584C62BBDC123001BD988 /* Int + Extensions.swift */,
+				EAC584BB2BBDBED3001BD988 /* UICollectionView + Extensions.swift */,
 				EA8198162BBB4D7400CFBCFE /* URLRequest + Extensions.swift */,
 			);
 			path = Extensions;
@@ -196,8 +224,12 @@
 		EA5B1BA62BB98BBC00245FBC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				EAC584C12BBDBFB8001BD988 /* UI */,
 				EA81980D2BBB2F1D00CFBCFE /* Reachability.swift */,
 				EA637BC22BBC9DB800EB3FB7 /* BenchTimer.swift */,
+				EAC584B22BBD9D0B001BD988 /* PinterestLayout.swift */,
+				EAC584BD2BBDBEFF001BD988 /* ReusableView.swift */,
+				EAC584BF2BBDBF65001BD988 /* NibBased.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -218,7 +250,6 @@
 			isa = PBXGroup;
 			children = (
 				EABF42832BB8848D004BA85A /* AppDelegate.swift */,
-				EABF42852BB8848D004BA85A /* SceneDelegate.swift */,
 				EA5B1BA92BB98C3B00245FBC /* Constants.swift */,
 				EA637BC62BBCB2B000EB3FB7 /* PrivateConstants.swift */,
 			);
@@ -228,6 +259,8 @@
 		EA5B1BAB2BB999CE00245FBC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EA637BCD2BBCB8C300EB3FB7 /* ServiceLocator.swift */,
+				EA637BC82BBCB46700EB3FB7 /* Routers */,
 				EA81980A2BBB2DE300CFBCFE /* ErrorHandling */,
 				EA23D5ED2BBB25E90070E423 /* WebService */,
 				EA5B1BAC2BB999DD00245FBC /* CoreData */,
@@ -246,7 +279,10 @@
 		EA5B1BAF2BB9EC2300245FBC /* ImageGalleryScreen */ = {
 			isa = PBXGroup;
 			children = (
+				EAC584B62BBDA1A1001BD988 /* ImageGalleryCell */,
+				EA637BCB2BBCB59200EB3FB7 /* ImageGalleryModuleConfigurator.swift */,
 				EA5B1BB02BB9EC4600245FBC /* ImageGalleryViewController.swift */,
+				EAC584B42BBD9E00001BD988 /* ImageGalleryViewController.xib */,
 				EA5B1BB52BB9ED6100245FBC /* ImageGalleryViewModel.swift */,
 			);
 			path = ImageGalleryScreen;
@@ -259,6 +295,14 @@
 				EA5B1BB72BB9ED8400245FBC /* ImageDetailViewModel.swift */,
 			);
 			path = ImageDetailScreen;
+			sourceTree = "<group>";
+		};
+		EA637BC82BBCB46700EB3FB7 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				EA637BC92BBCB47400EB3FB7 /* MainRouter.swift */,
+			);
+			path = Routers;
 			sourceTree = "<group>";
 		};
 		EA81980A2BBB2DE300CFBCFE /* ErrorHandling */ = {
@@ -320,6 +364,25 @@
 				EABF42A92BB8848E004BA85A /* GalleryAppForInnowiseUITestsLaunchTests.swift */,
 			);
 			path = GalleryAppForInnowiseUITests;
+			sourceTree = "<group>";
+		};
+		EAC584B62BBDA1A1001BD988 /* ImageGalleryCell */ = {
+			isa = PBXGroup;
+			children = (
+				EAC584B72BBDA1C3001BD988 /* ImageGalleryCell.swift */,
+				EAC584B82BBDA1C3001BD988 /* ImageGalleryCell.xib */,
+			);
+			path = ImageGalleryCell;
+			sourceTree = "<group>";
+		};
+		EAC584C12BBDBFB8001BD988 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EAC584C22BBDBFDE001BD988 /* BaseCollectionViewCell.swift */,
+				EAC584C42BBDC04E001BD988 /* BaseViewController.swift */,
+				EAC584C82BBDC6DB001BD988 /* ScaleFactor.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		F27922D7FE8AA4EFF03FC83E /* Frameworks */ = {
@@ -440,7 +503,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAC584B92BBDA1C3001BD988 /* ImageGalleryCell.xib in Resources */,
 				EABF42902BB8848D004BA85A /* Assets.xcassets in Resources */,
+				EAC584B52BBD9E00001BD988 /* ImageGalleryViewController.xib in Resources */,
 				EABF42932BB8848D004BA85A /* Base in Resources */,
 				EABF428B2BB8848D004BA85A /* Base in Resources */,
 			);
@@ -554,10 +619,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA8198092BBB2D1400CFBCFE /* WebService.swift in Sources */,
+				EAC584C32BBDBFDE001BD988 /* BaseCollectionViewCell.swift in Sources */,
+				EAC584B32BBD9D0B001BD988 /* PinterestLayout.swift in Sources */,
 				EA5B1BB82BB9ED8400245FBC /* ImageDetailViewModel.swift in Sources */,
+				EAC584BC2BBDBED3001BD988 /* UICollectionView + Extensions.swift in Sources */,
+				EAC584C92BBDC6DB001BD988 /* ScaleFactor.swift in Sources */,
 				EA8198132BBB466700CFBCFE /* UnsplashModels.swift in Sources */,
 				EA637BC52BBCA81C00EB3FB7 /* ImageDownloadProvider.swift in Sources */,
+				EAC584C02BBDBF65001BD988 /* NibBased.swift in Sources */,
 				EA5B1BAA2BB98C3B00245FBC /* Constants.swift in Sources */,
+				EAC584BE2BBDBEFF001BD988 /* ReusableView.swift in Sources */,
+				EA637BCC2BBCB59200EB3FB7 /* ImageGalleryModuleConfigurator.swift in Sources */,
+				EA637BCA2BBCB47400EB3FB7 /* MainRouter.swift in Sources */,
 				EABF42882BB8848D004BA85A /* ViewController.swift in Sources */,
 				EA81980C2BBB2E1F00CFBCFE /* InternalError.swift in Sources */,
 				EA5B1BB42BB9ECF100245FBC /* ImageDetailViewController.swift in Sources */,
@@ -565,14 +638,17 @@
 				EA637BC72BBCB2B000EB3FB7 /* PrivateConstants.swift in Sources */,
 				EA637BC32BBC9DB800EB3FB7 /* BenchTimer.swift in Sources */,
 				EA81980E2BBB2F1D00CFBCFE /* Reachability.swift in Sources */,
+				EA637BCE2BBCB8C300EB3FB7 /* ServiceLocator.swift in Sources */,
 				EABF42842BB8848D004BA85A /* AppDelegate.swift in Sources */,
 				EA5B1BB62BB9ED6100245FBC /* ImageGalleryViewModel.swift in Sources */,
 				EA23D5F22BBB26890070E423 /* UnsplashProvider.swift in Sources */,
 				EA8198172BBB4D7400CFBCFE /* URLRequest + Extensions.swift in Sources */,
+				EAC584BA2BBDA1C3001BD988 /* ImageGalleryCell.swift in Sources */,
 				EABF428E2BB8848D004BA85A /* GalleryAppForInnowise.xcdatamodeld in Sources */,
 				EA8198152BBB49E300CFBCFE /* RequestData.swift in Sources */,
-				EABF42862BB8848D004BA85A /* SceneDelegate.swift in Sources */,
+				EAC584C72BBDC123001BD988 /* Int + Extensions.swift in Sources */,
 				EA23D5EF2BBB262F0070E423 /* BaseProvider.swift in Sources */,
+				EAC584C52BBDC04E001BD988 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

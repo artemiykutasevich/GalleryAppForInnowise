@@ -7,12 +7,14 @@
 
 import Foundation
 
+// MARK: - RequestData
+
 struct RequestData {
     let endPoint: String
     let httpMethod: HTTPMEthod
     let parametres: RequestParametres
     let headers: RequestHeaders
-    
+
     init(endPoint: String, httpMethod: HTTPMEthod = .get, parametres: RequestParametres = [:], headers: RequestHeaders = [:]) {
         self.endPoint = endPoint
         self.httpMethod = httpMethod
@@ -21,6 +23,8 @@ struct RequestData {
     }
 }
 
+// MARK: - HTTPMEthod
+
 enum HTTPMEthod {
     case get
 
@@ -28,6 +32,3 @@ enum HTTPMEthod {
         return String(describing: self).uppercased()
     }
 }
-
-typealias RequestParametres = [String: Any]
-typealias RequestHeaders = [String: String]
