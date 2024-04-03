@@ -12,7 +12,7 @@ import UIKit
 final class ImageGalleryModuleConfigurator {
 
     static func instantiateModule() -> ImageGalleryViewController {
-        let controller = ImageGalleryViewController()
+        let controller: ImageGalleryViewController = ImageGalleryViewController.instantiate()
         let viewModel = ImageGalleryViewModel()
         viewModel.view = controller
         controller.viewModel = viewModel
