@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 // MARK: -  ImageGalleryCell
 
@@ -29,8 +30,9 @@ class ImageGalleryCell: BaseCollectionViewCell {
 
     // Functions
 
-    func configure(with image: UIImage) {
-        imageView.image = image
+    func configure(with model: UnsplashPageItem) {
+        let url = URL(string: model.urls.small)
+        imageView.kf.setImage(with: url)
     }
     
     private func configureUI() {

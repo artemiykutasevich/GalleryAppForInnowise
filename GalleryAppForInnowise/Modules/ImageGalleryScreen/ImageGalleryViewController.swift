@@ -57,7 +57,7 @@ final class ImageGalleryViewController: BaseViewController, ImageGalleryViewCont
     private func calculateCellWidth() -> CGFloat {
         let spaceWithoutInserts = collectionView.frame.width - 10.0 - 10.0
         let spaceWithoutPaddings = (Defaults.CollectionView.numberOfColumns - 1).toCGFloat() * Defaults.CollectionView.cellPading
-        let cellFreeWidth = spaceWithoutInserts - spaceWithoutInserts
+        let cellFreeWidth = spaceWithoutInserts - spaceWithoutPaddings
         let cellWidth = cellFreeWidth / Defaults.CollectionView.numberOfColumns.toCGFloat()
         return cellWidth
     }
