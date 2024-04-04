@@ -15,7 +15,11 @@ protocol ImageGalleryViewControllerProtocol: AnyObject {}
 
 final class ImageGalleryViewController: BaseViewController, ImageGalleryViewControllerProtocol {
 
+    // @IBOutlets
+
     @IBOutlet private weak var collectionView: UICollectionView!
+
+    // Properties
 
     private lazy var collectionViewLayout: PinterestLayout = {
         let layout = PinterestLayout()
@@ -27,6 +31,8 @@ final class ImageGalleryViewController: BaseViewController, ImageGalleryViewCont
 
     var viewModel: ImageGalleryViewModelProtocol!
 
+    // override
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
@@ -34,11 +40,13 @@ final class ImageGalleryViewController: BaseViewController, ImageGalleryViewCont
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel.loadPage(with: 0) { [weak self] success in
-            guard let self, success else { return }
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
+        viewModel.loadPage { [weak self] success in
+//            guard let self, success else { return }
+//            DispatchQueue.main.async {
+//                self.collectionView.reloadData()
+//            }
+            guard let self else { return }
+            collectionView.reloadData()
         }
     }
 
@@ -79,7 +87,14 @@ extension ImageGalleryViewController: UICollectionViewDataSource {
     }
 }
 
-extension ImageGalleryViewController: UICollectionViewDelegate {}
+extension ImageGalleryViewController: UICollectionViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        viewModel.checkIfNeedToLoadNextPage(scrollView) { [weak self] success in
+            guard let self else { return }
+            collectionView.reloadData()
+        }
+    }
+}
 
 // MARK: - PinterestLayoutDelegate
 
