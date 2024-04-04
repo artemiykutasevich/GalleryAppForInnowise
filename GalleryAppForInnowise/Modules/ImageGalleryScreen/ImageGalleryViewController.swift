@@ -15,7 +15,11 @@ protocol ImageGalleryViewControllerProtocol: AnyObject {}
 
 final class ImageGalleryViewController: BaseViewController, ImageGalleryViewControllerProtocol {
 
+    // @IBOutlets
+
     @IBOutlet private weak var collectionView: UICollectionView!
+
+    // Properties
 
     private lazy var collectionViewLayout: PinterestLayout = {
         let layout = PinterestLayout()
@@ -27,6 +31,8 @@ final class ImageGalleryViewController: BaseViewController, ImageGalleryViewCont
 
     var viewModel: ImageGalleryViewModelProtocol!
 
+    // override
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
@@ -34,11 +40,9 @@ final class ImageGalleryViewController: BaseViewController, ImageGalleryViewCont
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel.loadPage(with: 0) { [weak self] success in
-            guard let self, success else { return }
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
+        viewModel.loadPage { [weak self] success in
+            guard let self else { return }
+            pageLoadingHandler(success: success)
         }
     }
 
@@ -46,6 +50,8 @@ final class ImageGalleryViewController: BaseViewController, ImageGalleryViewCont
         super.viewDidAppear(animated)
         debugPrint("👀 Image Gallery Screen")
     }
+
+    // Functions
 
     private func configureCollectionView() {
         collectionView.dataSource = self
@@ -55,11 +61,23 @@ final class ImageGalleryViewController: BaseViewController, ImageGalleryViewCont
     }
 
     private func calculateCellWidth() -> CGFloat {
-        let spaceWithoutInserts = collectionView.frame.width - 10.0 - 10.0
-        let spaceWithoutPaddings = (Defaults.CollectionView.numberOfColumns - 1).toCGFloat() * Defaults.CollectionView.cellPading
-        let cellFreeWidth = spaceWithoutInserts - spaceWithoutInserts
-        let cellWidth = cellFreeWidth / Defaults.CollectionView.numberOfColumns.toCGFloat()
+        let leftInsert: CGFloat = Defaults.CollectionView.insertForSections.left
+        let rightInsert: CGFloat = Defaults.CollectionView.insertForSections.right
+        let numberOfColumns: Int = collectionViewLayout.numberOfColumns
+        let cellPadding: CGFloat = collectionViewLayout.cellPadding
+        let spaceWithoutInserts: CGFloat = collectionView.frame.width - leftInsert - rightInsert
+        let spaceWithoutPaddings = (numberOfColumns - 1).toCGFloat() * cellPadding
+        let cellFreeWidth = spaceWithoutInserts - spaceWithoutPaddings
+        let cellWidth = cellFreeWidth / numberOfColumns.toCGFloat()
         return cellWidth
+    }
+
+    private func pageLoadingHandler(success: Bool) {
+        if success {
+            collectionView.reloadData()
+        } else {
+            // TODO: ADD warning alert
+        }
     }
 }
 
@@ -72,16 +90,40 @@ extension ImageGalleryViewController: UICollectionViewDataSource {
 
     // swiftlint:disable:next line_length
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let item: UnsplashPageItem = viewModel.pages[indexPath.row]
         let cell: ImageGalleryCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
+        cell.configure(with: item)
         return cell
     }
 }
 
-extension ImageGalleryViewController: UICollectionViewDelegate {}
+extension ImageGalleryViewController: UICollectionViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        viewModel.checkIfNeedToLoadNextPage(scrollView) { [weak self] success in
+            guard let self else { return }
+            pageLoadingHandler(success: success)
+        }
+    }
+}
+
+extension ImageGalleryViewController: UICollectionViewDelegateFlowLayout {
+    // swiftlint:disable:next line_length
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return Defaults.CollectionView.insertForSections
+    }
+}
 
 // MARK: - PinterestLayoutDelegate
 
 extension ImageGalleryViewController: PinterestLayoutDelegate {
+    func collectionView(collectionView: UICollectionView, sizeForSectionHeaderViewForSection section: Int) -> CGSize {
+        return .zero
+    }
+
+    func collectionView(collectionView: UICollectionView, sizeForSectionFooterViewForSection section: Int) -> CGSize {
+        return .zero
+    }
+
     // swiftlint:disable:next line_length
     func collectionView(collectionView: UICollectionView, heightForImageAtIndexPath indexPath: IndexPath, withWidth: CGFloat) -> CGFloat {
         let item = viewModel.pages[indexPath.item]
@@ -103,6 +145,7 @@ fileprivate extension ImageGalleryViewController {
         enum CollectionView {
             static let numberOfColumns: Int = 2
             static let cellPading: CGFloat = 10.0
+            static let insertForSections: UIEdgeInsets = UIEdgeInsets(top: cellPading, left: cellPading, bottom: cellPading, right: cellPading)
         }
     }
 }

@@ -5,15 +5,19 @@
 //  Created by Artem Kutasevich on 31.03.24.
 //
 
-import Foundation
+import UIKit
 import Combine
 
 // MARK: - ImageGalleryViewModelProtocol
 
 protocol ImageGalleryViewModelProtocol {
+    var currentPage: Int { get set }
+    var isLoading: Bool { get set }
+    
     var pages: UnsplasPage { get set }
     
-    func loadPage(with number: Int, completion success: @escaping (Bool) -> Void)
+    func loadPage(completion success: @escaping (Bool) -> Void)
+    func checkIfNeedToLoadNextPage(_ scrollView: UIScrollView, completion success: @escaping (Bool) -> Void)
 }
 
 // MARK: - ImageGalleryViewModel
@@ -21,22 +25,40 @@ protocol ImageGalleryViewModelProtocol {
 final class ImageGalleryViewModel {
     weak var view: ImageGalleryViewControllerProtocol?
     
+    var currentPage: Int = 0
+    var isLoading: Bool = false
     var pages: UnsplasPage = []
 }
 
 extension ImageGalleryViewModel: ImageGalleryViewModelProtocol {
-    func loadPage(with number: Int, completion success: @escaping (Bool) -> Void) {
+    func loadPage(completion success: @escaping (Bool) -> Void) {
+        guard !isLoading else { return }
+        isLoading = true
+        
         let provider: BaseProviderProtocol = serviceLocator.getService()
-        provider.getPage(with: number) { [weak self] result in
+        provider.getPage(with: currentPage) { [weak self] result in
             guard let self else { return }
             switch result {
             case .success(let newPages):
-                pages += newPages
+                pages.append(contentsOf: newPages)
+                currentPage += 1
                 success(true)
             case .failure(let failure):
                 debugPrint("❌ page downloading")
                 success(false)
             }
+            isLoading = false
+        }
+    }
+    
+    func checkIfNeedToLoadNextPage(_ scrollView: UIScrollView, completion success: @escaping (Bool) -> Void) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let height = scrollView.frame.size.height
+        
+        if offsetY > contentHeight - height {
+            // Load next page when user reaches the bottom
+            loadPage(completion: success)
         }
     }
 }

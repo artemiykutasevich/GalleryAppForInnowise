@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		43CBB64AE308B87AC0A87E08 /* Pods_GalleryAppForInnowiseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8DA85F015DD66D72FAE8329 /* Pods_GalleryAppForInnowiseTests.framework */; };
-		94E585927C9D67EC7AE1781F /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FD044F804BC280D466D568 /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework */; };
-		B6B530C6C4470B3D7C5381D9 /* Pods_GalleryAppForInnowise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686B6C39408E038222649476 /* Pods_GalleryAppForInnowise.framework */; };
+		23A6421F6C7678EC35FE9898 /* Pods_GalleryAppForInnowiseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43AC0DC6F79D6F320C2E3AB4 /* Pods_GalleryAppForInnowiseTests.framework */; };
+		8818571E67CF09B44F7F7329 /* Pods_GalleryAppForInnowise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA6C50FB3FB4ECE84888CD5F /* Pods_GalleryAppForInnowise.framework */; };
+		B3DD0881536D44ACB72BE65A /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3992F73C73E9EAD027B7601 /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework */; };
 		EA23D5EF2BBB262F0070E423 /* BaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA23D5EE2BBB262F0070E423 /* BaseProvider.swift */; };
 		EA23D5F22BBB26890070E423 /* UnsplashProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA23D5F12BBB26890070E423 /* UnsplashProvider.swift */; };
 		EA5B1BAA2BB98C3B00245FBC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BA92BB98C3B00245FBC /* Constants.swift */; };
@@ -69,11 +69,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2F5FA1350336F06FBF5DAA53 /* Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.debug.xcconfig"; path = "Target Support Files/Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests/Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		39C9CE09D9BA6F6EA8A3FD30 /* Pods-GalleryAppForInnowise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryAppForInnowise.release.xcconfig"; path = "Target Support Files/Pods-GalleryAppForInnowise/Pods-GalleryAppForInnowise.release.xcconfig"; sourceTree = "<group>"; };
-		41FD044F804BC280D466D568 /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		686B6C39408E038222649476 /* Pods_GalleryAppForInnowise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryAppForInnowise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8DA85F015DD66D72FAE8329 /* Pods_GalleryAppForInnowiseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryAppForInnowiseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03FAE9FEFDDE73DC99B14031 /* Pods-GalleryAppForInnowiseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryAppForInnowiseTests.release.xcconfig"; path = "Target Support Files/Pods-GalleryAppForInnowiseTests/Pods-GalleryAppForInnowiseTests.release.xcconfig"; sourceTree = "<group>"; };
+		43AC0DC6F79D6F320C2E3AB4 /* Pods_GalleryAppForInnowiseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryAppForInnowiseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FC1F9846986C38C41201552 /* Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.debug.xcconfig"; path = "Target Support Files/Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests/Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7111C3A29BC6EFA1165D5723 /* Pods-GalleryAppForInnowise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryAppForInnowise.release.xcconfig"; path = "Target Support Files/Pods-GalleryAppForInnowise/Pods-GalleryAppForInnowise.release.xcconfig"; sourceTree = "<group>"; };
+		8BF6239747FED4B43388EF89 /* Pods-GalleryAppForInnowise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryAppForInnowise.debug.xcconfig"; path = "Target Support Files/Pods-GalleryAppForInnowise/Pods-GalleryAppForInnowise.debug.xcconfig"; sourceTree = "<group>"; };
+		A05141331FC6A76F6C330E3E /* Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.release.xcconfig"; path = "Target Support Files/Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests/Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AA6C50FB3FB4ECE84888CD5F /* Pods_GalleryAppForInnowise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryAppForInnowise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B772798415529C28BE8B469C /* Pods-GalleryAppForInnowiseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryAppForInnowiseTests.debug.xcconfig"; path = "Target Support Files/Pods-GalleryAppForInnowiseTests/Pods-GalleryAppForInnowiseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C3992F73C73E9EAD027B7601 /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA23D5EE2BBB262F0070E423 /* BaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProvider.swift; sourceTree = "<group>"; };
 		EA23D5F12BBB26890070E423 /* UnsplashProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashProvider.swift; sourceTree = "<group>"; };
 		EA5B1BA92BB98C3B00245FBC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -118,10 +122,6 @@
 		EAC584C42BBDC04E001BD988 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		EAC584C62BBDC123001BD988 /* Int + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Extensions.swift"; sourceTree = "<group>"; };
 		EAC584C82BBDC6DB001BD988 /* ScaleFactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleFactor.swift; sourceTree = "<group>"; };
-		F48245F2C26964D917F35D3C /* Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.release.xcconfig"; path = "Target Support Files/Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests/Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.release.xcconfig"; sourceTree = "<group>"; };
-		F8F24FACA78B2B940E8F8108 /* Pods-GalleryAppForInnowiseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryAppForInnowiseTests.debug.xcconfig"; path = "Target Support Files/Pods-GalleryAppForInnowiseTests/Pods-GalleryAppForInnowiseTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F9D9C62D79CDCA554B7B362C /* Pods-GalleryAppForInnowise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryAppForInnowise.debug.xcconfig"; path = "Target Support Files/Pods-GalleryAppForInnowise/Pods-GalleryAppForInnowise.debug.xcconfig"; sourceTree = "<group>"; };
-		FEB5DE400E08AF3C39BD9C54 /* Pods-GalleryAppForInnowiseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryAppForInnowiseTests.release.xcconfig"; path = "Target Support Files/Pods-GalleryAppForInnowiseTests/Pods-GalleryAppForInnowiseTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6B530C6C4470B3D7C5381D9 /* Pods_GalleryAppForInnowise.framework in Frameworks */,
+				8818571E67CF09B44F7F7329 /* Pods_GalleryAppForInnowise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43CBB64AE308B87AC0A87E08 /* Pods_GalleryAppForInnowiseTests.framework in Frameworks */,
+				23A6421F6C7678EC35FE9898 /* Pods_GalleryAppForInnowiseTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,22 +145,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94E585927C9D67EC7AE1781F /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework in Frameworks */,
+				B3DD0881536D44ACB72BE65A /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1454F9EA1FCDDA790CF589B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA6C50FB3FB4ECE84888CD5F /* Pods_GalleryAppForInnowise.framework */,
+				C3992F73C73E9EAD027B7601 /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework */,
+				43AC0DC6F79D6F320C2E3AB4 /* Pods_GalleryAppForInnowiseTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E99AFD1E812F2DDEBE804291 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F9D9C62D79CDCA554B7B362C /* Pods-GalleryAppForInnowise.debug.xcconfig */,
-				39C9CE09D9BA6F6EA8A3FD30 /* Pods-GalleryAppForInnowise.release.xcconfig */,
-				2F5FA1350336F06FBF5DAA53 /* Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.debug.xcconfig */,
-				F48245F2C26964D917F35D3C /* Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.release.xcconfig */,
-				F8F24FACA78B2B940E8F8108 /* Pods-GalleryAppForInnowiseTests.debug.xcconfig */,
-				FEB5DE400E08AF3C39BD9C54 /* Pods-GalleryAppForInnowiseTests.release.xcconfig */,
+				8BF6239747FED4B43388EF89 /* Pods-GalleryAppForInnowise.debug.xcconfig */,
+				7111C3A29BC6EFA1165D5723 /* Pods-GalleryAppForInnowise.release.xcconfig */,
+				5FC1F9846986C38C41201552 /* Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.debug.xcconfig */,
+				A05141331FC6A76F6C330E3E /* Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.release.xcconfig */,
+				B772798415529C28BE8B469C /* Pods-GalleryAppForInnowiseTests.debug.xcconfig */,
+				03FAE9FEFDDE73DC99B14031 /* Pods-GalleryAppForInnowiseTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -322,7 +332,7 @@
 				EABF42A62BB8848E004BA85A /* GalleryAppForInnowiseUITests */,
 				EABF42812BB8848D004BA85A /* Products */,
 				E99AFD1E812F2DDEBE804291 /* Pods */,
-				F27922D7FE8AA4EFF03FC83E /* Frameworks */,
+				1454F9EA1FCDDA790CF589B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -385,16 +395,6 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		F27922D7FE8AA4EFF03FC83E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				686B6C39408E038222649476 /* Pods_GalleryAppForInnowise.framework */,
-				41FD044F804BC280D466D568 /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework */,
-				E8DA85F015DD66D72FAE8329 /* Pods_GalleryAppForInnowiseTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -402,11 +402,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EABF42AD2BB8848E004BA85A /* Build configuration list for PBXNativeTarget "GalleryAppForInnowise" */;
 			buildPhases = (
-				88183BE44F0EB6163DCA1456 /* [CP] Check Pods Manifest.lock */,
+				A0DB7B59F3A50029FE95F8B5 /* [CP] Check Pods Manifest.lock */,
 				EABF427C2BB8848D004BA85A /* Sources */,
 				EABF427D2BB8848D004BA85A /* Frameworks */,
 				EABF427E2BB8848D004BA85A /* Resources */,
-				EA5B1BA32BB88A3A00245FBC /* ShellScript */,
+				1E87A6CFD49FB8A9F1D40276 /* [CP] Embed Pods Frameworks */,
+				EAD7735D2BBF38AD005F27B6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -421,7 +422,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EABF42B02BB8848E004BA85A /* Build configuration list for PBXNativeTarget "GalleryAppForInnowiseTests" */;
 			buildPhases = (
-				11C00E32C199A8780B79A0A7 /* [CP] Check Pods Manifest.lock */,
+				CA5B83995D556641839375A4 /* [CP] Check Pods Manifest.lock */,
 				EABF42952BB8848E004BA85A /* Sources */,
 				EABF42962BB8848E004BA85A /* Frameworks */,
 				EABF42972BB8848E004BA85A /* Resources */,
@@ -440,10 +441,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EABF42B32BB8848E004BA85A /* Build configuration list for PBXNativeTarget "GalleryAppForInnowiseUITests" */;
 			buildPhases = (
-				7BE57B3876FF5C2D94B76ECA /* [CP] Check Pods Manifest.lock */,
+				3DD4C4C6B0BDEF1BEE1706EE /* [CP] Check Pods Manifest.lock */,
 				EABF429F2BB8848E004BA85A /* Sources */,
 				EABF42A02BB8848E004BA85A /* Frameworks */,
 				EABF42A12BB8848E004BA85A /* Resources */,
+				86CE5B6689F125034B556B05 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -528,29 +530,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		11C00E32C199A8780B79A0A7 /* [CP] Check Pods Manifest.lock */ = {
+		1E87A6CFD49FB8A9F1D40276 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GalleryAppForInnowise/Pods-GalleryAppForInnowise-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GalleryAppForInnowiseTests-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-GalleryAppForInnowise/Pods-GalleryAppForInnowise-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GalleryAppForInnowise/Pods-GalleryAppForInnowise-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7BE57B3876FF5C2D94B76ECA /* [CP] Check Pods Manifest.lock */ = {
+		3DD4C4C6B0BDEF1BEE1706EE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -572,7 +569,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		88183BE44F0EB6163DCA1456 /* [CP] Check Pods Manifest.lock */ = {
+		86CE5B6689F125034B556B05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests/Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests/Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests/Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0DB7B59F3A50029FE95F8B5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -594,7 +608,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EA5B1BA32BB88A3A00245FBC /* ShellScript */ = {
+		CA5B83995D556641839375A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GalleryAppForInnowiseTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAD7735D2BBF38AD005F27B6 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -609,7 +645,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -825,7 +861,7 @@
 		};
 		EABF42AE2BB8848E004BA85A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9D9C62D79CDCA554B7B362C /* Pods-GalleryAppForInnowise.debug.xcconfig */;
+			baseConfigurationReference = 8BF6239747FED4B43388EF89 /* Pods-GalleryAppForInnowise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -859,7 +895,7 @@
 		};
 		EABF42AF2BB8848E004BA85A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39C9CE09D9BA6F6EA8A3FD30 /* Pods-GalleryAppForInnowise.release.xcconfig */;
+			baseConfigurationReference = 7111C3A29BC6EFA1165D5723 /* Pods-GalleryAppForInnowise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -893,7 +929,7 @@
 		};
 		EABF42B12BB8848E004BA85A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8F24FACA78B2B940E8F8108 /* Pods-GalleryAppForInnowiseTests.debug.xcconfig */;
+			baseConfigurationReference = B772798415529C28BE8B469C /* Pods-GalleryAppForInnowiseTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -918,7 +954,7 @@
 		};
 		EABF42B22BB8848E004BA85A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEB5DE400E08AF3C39BD9C54 /* Pods-GalleryAppForInnowiseTests.release.xcconfig */;
+			baseConfigurationReference = 03FAE9FEFDDE73DC99B14031 /* Pods-GalleryAppForInnowiseTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -943,7 +979,7 @@
 		};
 		EABF42B42BB8848E004BA85A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F5FA1350336F06FBF5DAA53 /* Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.debug.xcconfig */;
+			baseConfigurationReference = 5FC1F9846986C38C41201552 /* Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -967,7 +1003,7 @@
 		};
 		EABF42B52BB8848E004BA85A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F48245F2C26964D917F35D3C /* Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.release.xcconfig */;
+			baseConfigurationReference = A05141331FC6A76F6C330E3E /* Pods-GalleryAppForInnowise-GalleryAppForInnowiseUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

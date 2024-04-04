@@ -7,6 +7,7 @@ target 'GalleryAppForInnowise' do
 
   # Pods for GalleryAppForInnowise
   pod 'SwiftLint'
+  pod 'Kingfisher', '~> 7.0'
 
   target 'GalleryAppForInnowiseTests' do
     inherit! :search_paths
