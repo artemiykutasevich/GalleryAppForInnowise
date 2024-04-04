@@ -98,6 +98,12 @@ extension ImageGalleryViewController: UICollectionViewDataSource {
 }
 
 extension ImageGalleryViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let pageItem = viewModel.pages[indexPath.item]
+        let mainRouter: MainRouterProtocol = serviceLocator.getService()
+        mainRouter.showImageDetailScreen(with: pageItem)
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         viewModel.checkIfNeedToLoadNextPage(scrollView) { [weak self] success in
             guard let self else { return }

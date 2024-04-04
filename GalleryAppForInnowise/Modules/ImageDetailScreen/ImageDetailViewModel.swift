@@ -7,4 +7,20 @@
 
 import Foundation
 
-final class ImageDetailViewModel {}
+// MARK: - ImageDetailViewModelProtocol
+
+protocol ImageDetailViewModelProtocol {
+    var currentItem: UnsplashPageItem { get set }
+}
+
+// MARK: - ImageDetailViewModel
+
+final class ImageDetailViewModel {
+    var currentItem: UnsplashPageItem
+    
+    init(currentItem: UnsplashPageItem) {
+        self.currentItem = currentItem
+    }
+}
+
+extension ImageDetailViewModel: ImageDetailViewModelProtocol {}

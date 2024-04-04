@@ -23,8 +23,6 @@ protocol ImageGalleryViewModelProtocol {
 // MARK: - ImageGalleryViewModel
 
 final class ImageGalleryViewModel {
-    weak var view: ImageGalleryViewControllerProtocol?
-    
     var currentPage: Int = 0
     var isLoading: Bool = false
     var pages: UnsplasPage = []

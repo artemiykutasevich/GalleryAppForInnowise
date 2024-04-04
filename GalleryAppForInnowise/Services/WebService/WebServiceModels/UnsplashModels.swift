@@ -24,8 +24,8 @@ struct UnsplashPageItem: Codable {
     let height: Int
 //    let color: String
 //    let blurHash: String
-//    let description: String?
-//    let altDescription: String
+    let description: String?
+    let altDescription: String
 //    let breadcrumbs: [JSONAny]
     let urls: UnsplashUrls
     let links: UnsplashLinks
@@ -46,8 +46,8 @@ struct UnsplashPageItem: Codable {
 //        case promotedAt = "promoted_at"
 //        case color
 //        case blurHash = "blur_hash"
-//        case description
-//        case altDescription = "alt_description"
+        case description
+        case altDescription = "alt_description"
 //        case breadcrumbs
 //        case likes
 //        case likedByUser = "liked_by_user"
