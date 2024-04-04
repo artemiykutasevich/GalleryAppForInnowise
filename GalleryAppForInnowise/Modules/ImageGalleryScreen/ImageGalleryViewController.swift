@@ -72,7 +72,9 @@ extension ImageGalleryViewController: UICollectionViewDataSource {
 
     // swiftlint:disable:next line_length
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let item: UnsplashPageItem = viewModel.pages[indexPath.row]
         let cell: ImageGalleryCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
+        cell.configure(with: item)
         return cell
     }
 }
