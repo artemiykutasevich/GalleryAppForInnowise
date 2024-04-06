@@ -9,6 +9,12 @@ import Foundation
 
 extension Int {
     func toCGFloat() -> CGFloat {
-        return CGFloat(integerLiteral: self)
+        return CGFloat(self)
+    }
+}
+
+extension Int16 {
+    func toCGFloat() -> CGFloat {
+        return CGFloat(self)
     }
 }

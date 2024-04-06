@@ -90,7 +90,7 @@ extension ImageGalleryViewController: UICollectionViewDataSource {
 
     // swiftlint:disable:next line_length
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let item: UnsplashPageItem = viewModel.pages[indexPath.row]
+        let item = viewModel.pages[indexPath.row]
         let cell: ImageGalleryCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
         cell.configure(with: item)
         return cell
@@ -133,7 +133,7 @@ extension ImageGalleryViewController: PinterestLayoutDelegate {
     // swiftlint:disable:next line_length
     func collectionView(collectionView: UICollectionView, heightForImageAtIndexPath indexPath: IndexPath, withWidth: CGFloat) -> CGFloat {
         let item = viewModel.pages[indexPath.item]
-        let imageAspect: CGFloat = item.height.toCGFloat() / item.width.toCGFloat()
+        let imageAspect: CGFloat = item.size.height / item.size.width
         let cellWidth: CGFloat = calculateCellWidth()
         return cellWidth * imageAspect
     }

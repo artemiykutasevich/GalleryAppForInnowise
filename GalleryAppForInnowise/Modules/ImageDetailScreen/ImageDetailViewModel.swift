@@ -10,15 +10,15 @@ import Foundation
 // MARK: - ImageDetailViewModelProtocol
 
 protocol ImageDetailViewModelProtocol {
-    var currentItem: UnsplashPageItem { get set }
+    var currentItem: PageItem { get set }
 }
 
 // MARK: - ImageDetailViewModel
 
 final class ImageDetailViewModel: ImageDetailViewModelProtocol {
-    var currentItem: UnsplashPageItem
+    var currentItem: PageItem
 
-    init(currentItem: UnsplashPageItem) {
+    init(currentItem: PageItem) {
         self.currentItem = currentItem
     }
 }

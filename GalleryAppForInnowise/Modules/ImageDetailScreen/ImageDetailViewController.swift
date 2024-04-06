@@ -43,11 +43,10 @@ final class ImageDetailViewController: BaseViewController, ImageDetailController
 
     private func configureOutlets() {
         let currentItem = viewModel.currentItem
-        titleLabel.text = currentItem.altDescription
-        let description: String = currentItem.description ?? String()
+        titleLabel.text = currentItem.post.title
+        let description: String = currentItem.post.description ?? String()
         descritionLabel.text = description.isEmpty ? "No description" : description
-        let date: String = currentItem.createdAt.toDate()?.toString() ?? "No Date"
-        dataLabel.text = date
+        dataLabel.text = currentItem.createAt.toString()
         guard let url = URL(string: currentItem.urls.regular) else { return }
         imageView.kf.setImage(with: url)
         blurredImageView.kf.setImage(with: url)

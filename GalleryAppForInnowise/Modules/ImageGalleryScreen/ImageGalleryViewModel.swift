@@ -13,7 +13,7 @@ import Combine
 protocol ImageGalleryViewModelProtocol {
     var currentPage: Int { get set }
     var isLoading: Bool { get set }
-    var pages: UnsplasPage { get set }
+    var pages: Page { get set }
 
     func loadPage(completion success: @escaping (Bool) -> Void)
     func checkIfNeedToLoadNextPage(_ scrollView: UIScrollView, completion success: @escaping (Bool) -> Void)
@@ -24,7 +24,7 @@ protocol ImageGalleryViewModelProtocol {
 final class ImageGalleryViewModel {
     var currentPage: Int = 0
     var isLoading: Bool = false
-    var pages: UnsplasPage = []
+    var pages: Page = []
 }
 
 extension ImageGalleryViewModel: ImageGalleryViewModelProtocol {
@@ -36,7 +36,7 @@ extension ImageGalleryViewModel: ImageGalleryViewModelProtocol {
             guard let self else { return }
             switch result {
             case .success(let newPages):
-                pages.append(contentsOf: newPages)
+                pages.append(contentsOf: newPages.toPage())
                 currentPage += 1
                 success(true)
             case .failure(let failure):

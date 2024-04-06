@@ -30,7 +30,7 @@ class ImageGalleryCell: BaseCollectionViewCell {
 
     // Functions
 
-    func configure(with model: UnsplashPageItem) {
+    func configure(with model: PageItem) {
         let url = URL(string: model.urls.small)
         imageView.kf.setImage(with: url)
     }
