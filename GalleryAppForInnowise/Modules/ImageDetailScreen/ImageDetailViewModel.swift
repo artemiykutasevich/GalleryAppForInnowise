@@ -15,12 +15,10 @@ protocol ImageDetailViewModelProtocol {
 
 // MARK: - ImageDetailViewModel
 
-final class ImageDetailViewModel {
+final class ImageDetailViewModel: ImageDetailViewModelProtocol {
     var currentItem: UnsplashPageItem
     
     init(currentItem: UnsplashPageItem) {
         self.currentItem = currentItem
     }
 }
-
-extension ImageDetailViewModel: ImageDetailViewModelProtocol {}

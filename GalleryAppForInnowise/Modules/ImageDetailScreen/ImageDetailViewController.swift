@@ -13,7 +13,9 @@ protocol ImageDetailControllerProtocol {}
 
 // MARK: - ImageDetailViewController
 
-final class ImageDetailViewController: BaseViewController {
+final class ImageDetailViewController: BaseViewController, ImageDetailControllerProtocol {
+    
+    // @IBOutlets
     
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var blurredImageView: UIImageView!
@@ -22,11 +24,25 @@ final class ImageDetailViewController: BaseViewController {
     @IBOutlet private weak var descritionLabel: UILabel!
     @IBOutlet private weak var dataLabel: UILabel!
     
+    // Properties
+    
     var viewModel: ImageDetailViewModelProtocol!
+    
+    // override
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureOutlets()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        debugPrint("👀 Image Gallery Screen")
+    }
+    
+    // Functions
+    
+    private func configureOutlets() {
         let currentItem = viewModel.currentItem
         titleLabel.text = currentItem.altDescription
         
@@ -41,5 +57,3 @@ final class ImageDetailViewController: BaseViewController {
         blurredImageView.kf.setImage(with: url)
     }
 }
-
-extension ImageDetailViewController: ImageDetailControllerProtocol {}
