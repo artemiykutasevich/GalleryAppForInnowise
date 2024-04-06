@@ -12,6 +12,8 @@
 		B3DD0881536D44ACB72BE65A /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3992F73C73E9EAD027B7601 /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework */; };
 		EA23D5EF2BBB262F0070E423 /* BaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA23D5EE2BBB262F0070E423 /* BaseProvider.swift */; };
 		EA23D5F22BBB26890070E423 /* UnsplashProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA23D5F12BBB26890070E423 /* UnsplashProvider.swift */; };
+		EA26353E2BC1CAE100B4EAC4 /* Date + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26353D2BC1CAE100B4EAC4 /* Date + Extensions.swift */; };
+		EA2635402BC1CED600B4EAC4 /* String + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26353F2BC1CED600B4EAC4 /* String + Extensions.swift */; };
 		EA5B1BAA2BB98C3B00245FBC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BA92BB98C3B00245FBC /* Constants.swift */; };
 		EA5B1BB12BB9EC4600245FBC /* ImageGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB02BB9EC4600245FBC /* ImageGalleryViewController.swift */; };
 		EA5B1BB42BB9ECF100245FBC /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB32BB9ECF100245FBC /* ImageDetailViewController.swift */; };
@@ -82,6 +84,8 @@
 		C3992F73C73E9EAD027B7601 /* Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryAppForInnowise_GalleryAppForInnowiseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA23D5EE2BBB262F0070E423 /* BaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProvider.swift; sourceTree = "<group>"; };
 		EA23D5F12BBB26890070E423 /* UnsplashProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashProvider.swift; sourceTree = "<group>"; };
+		EA26353D2BC1CAE100B4EAC4 /* Date + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extensions.swift"; sourceTree = "<group>"; };
+		EA26353F2BC1CED600B4EAC4 /* String + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extensions.swift"; sourceTree = "<group>"; };
 		EA5B1BA92BB98C3B00245FBC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EA5B1BB02BB9EC4600245FBC /* ImageGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewController.swift; sourceTree = "<group>"; };
 		EA5B1BB32BB9ECF100245FBC /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
@@ -229,8 +233,10 @@
 			isa = PBXGroup;
 			children = (
 				EAC584C62BBDC123001BD988 /* Int + Extensions.swift */,
+				EA26353D2BC1CAE100B4EAC4 /* Date + Extensions.swift */,
 				EAC584BB2BBDBED3001BD988 /* UICollectionView + Extensions.swift */,
 				EA8198162BBB4D7400CFBCFE /* URLRequest + Extensions.swift */,
+				EA26353F2BC1CED600B4EAC4 /* String + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -679,6 +685,7 @@
 				EA81980C2BBB2E1F00CFBCFE /* InternalError.swift in Sources */,
 				EA5B1BB42BB9ECF100245FBC /* ImageDetailViewController.swift in Sources */,
 				EA5B1BB12BB9EC4600245FBC /* ImageGalleryViewController.swift in Sources */,
+				EA2635402BC1CED600B4EAC4 /* String + Extensions.swift in Sources */,
 				EA637BC72BBCB2B000EB3FB7 /* PrivateConstants.swift in Sources */,
 				EA637BC32BBC9DB800EB3FB7 /* BenchTimer.swift in Sources */,
 				EA81980E2BBB2F1D00CFBCFE /* Reachability.swift in Sources */,
@@ -689,6 +696,7 @@
 				EA8198172BBB4D7400CFBCFE /* URLRequest + Extensions.swift in Sources */,
 				EAC584BA2BBDA1C3001BD988 /* ImageGalleryCell.swift in Sources */,
 				EABF428E2BB8848D004BA85A /* GalleryAppForInnowise.xcdatamodeld in Sources */,
+				EA26353E2BC1CAE100B4EAC4 /* Date + Extensions.swift in Sources */,
 				EA8198152BBB49E300CFBCFE /* RequestData.swift in Sources */,
 				EAC584C72BBDC123001BD988 /* Int + Extensions.swift in Sources */,
 				EA23D5EF2BBB262F0070E423 /* BaseProvider.swift in Sources */,

@@ -17,7 +17,7 @@ struct UnsplashPageItem: Codable {
     let id: String
 //    let slug: String
 //    let alternativeSlugs: UnsplashAlternativeSlugs
-//    let createdAt: Date
+    let createdAt: String
 //    let updatedAt: Date
 //    let promotedAt: Date?
     let width: Int
@@ -41,7 +41,7 @@ struct UnsplashPageItem: Codable {
         case id, urls, links, width, height
 //        case slug
 //        case alternativeSlugs = "alternative_slugs"
-//        case createdAt = "created_at"
+        case createdAt = "created_at"
 //        case updatedAt = "updated_at"
 //        case promotedAt = "promoted_at"
 //        case color
