@@ -13,9 +13,8 @@ import Combine
 protocol ImageGalleryViewModelProtocol {
     var currentPage: Int { get set }
     var isLoading: Bool { get set }
-    
     var pages: UnsplasPage { get set }
-    
+
     func loadPage(completion success: @escaping (Bool) -> Void)
     func checkIfNeedToLoadNextPage(_ scrollView: UIScrollView, completion success: @escaping (Bool) -> Void)
 }
@@ -32,7 +31,6 @@ extension ImageGalleryViewModel: ImageGalleryViewModelProtocol {
     func loadPage(completion success: @escaping (Bool) -> Void) {
         guard !isLoading else { return }
         isLoading = true
-        
         let provider: BaseProviderProtocol = serviceLocator.getService()
         provider.getPage(with: currentPage) { [weak self] result in
             guard let self else { return }
@@ -48,12 +46,11 @@ extension ImageGalleryViewModel: ImageGalleryViewModelProtocol {
             isLoading = false
         }
     }
-    
+
     func checkIfNeedToLoadNextPage(_ scrollView: UIScrollView, completion success: @escaping (Bool) -> Void) {
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
         let height = scrollView.frame.size.height
-        
         if offsetY > contentHeight - height {
             // Load next page when user reaches the bottom
             loadPage(completion: success)

@@ -29,7 +29,7 @@ extension MainRouter: MainRouterProtocol {
         let imageDetailScreen = ImageDetailModuleConfigurator.instantiateModule(currentItem: pageItem)
         window.rootViewController?.present(imageDetailScreen, animated: true)
     }
-    
+
     func showImageGalleryScreen() {
         let imageGalleryScreen = ImageGalleryModuleConfigurator.instantiateModule()
         window.rootViewController = imageGalleryScreen

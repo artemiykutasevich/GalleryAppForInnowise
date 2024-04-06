@@ -103,7 +103,7 @@ extension ImageGalleryViewController: UICollectionViewDelegate {
         let mainRouter: MainRouterProtocol = serviceLocator.getService()
         mainRouter.showImageDetailScreen(with: pageItem)
     }
-    
+
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         viewModel.checkIfNeedToLoadNextPage(scrollView) { [weak self] success in
             guard let self else { return }

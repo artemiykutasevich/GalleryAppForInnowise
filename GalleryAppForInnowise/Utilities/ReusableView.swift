@@ -20,4 +20,3 @@ extension ReusableView where Self: UIView {
         return NSStringFromClass(self)
     }
 }
-

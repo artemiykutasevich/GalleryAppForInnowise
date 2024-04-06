@@ -7,7 +7,7 @@
 
 import UIKit
 
-//swiftlint: disable all
+// swiftlint: disable all
 
 public class PinterestLayout: UICollectionViewLayout {
     
@@ -242,4 +242,4 @@ public protocol PinterestLayoutDelegate: AnyObject {
     func collectionView(collectionView: UICollectionView, heightForAnnotationAtIndexPath indexPath: IndexPath, withWidth: CGFloat) -> CGFloat
 }
 
-//swiftlint: enable all
+// swiftlint: enable all

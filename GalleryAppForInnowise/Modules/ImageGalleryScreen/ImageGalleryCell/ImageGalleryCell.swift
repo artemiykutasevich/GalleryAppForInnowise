@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-// MARK: -  ImageGalleryCell
+// MARK: - ImageGalleryCell
 
 class ImageGalleryCell: BaseCollectionViewCell {
 
@@ -22,7 +22,7 @@ class ImageGalleryCell: BaseCollectionViewCell {
         super.prepareForReuse()
         imageView.image = nil
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
         configureUI()
@@ -34,7 +34,7 @@ class ImageGalleryCell: BaseCollectionViewCell {
         let url = URL(string: model.urls.small)
         imageView.kf.setImage(with: url)
     }
-    
+
     private func configureUI() {
         self.clipsToBounds = true
         self.layer.cornerRadius = 10 * ScaleFactor.scaleCoffee

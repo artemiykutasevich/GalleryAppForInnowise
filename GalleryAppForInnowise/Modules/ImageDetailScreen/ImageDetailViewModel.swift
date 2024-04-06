@@ -17,7 +17,7 @@ protocol ImageDetailViewModelProtocol {
 
 final class ImageDetailViewModel: ImageDetailViewModelProtocol {
     var currentItem: UnsplashPageItem
-    
+
     init(currentItem: UnsplashPageItem) {
         self.currentItem = currentItem
     }
