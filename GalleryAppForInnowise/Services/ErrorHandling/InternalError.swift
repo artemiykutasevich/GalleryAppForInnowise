@@ -5,7 +5,9 @@
 //  Created by Artem Kutasevich on 1.04.24.
 //
 
-enum InternalError: Error {
+import Foundation
+
+enum InternalError: LocalizedError {
     case unknown
     case incorectURL
     case incorectRequest
@@ -17,4 +19,11 @@ enum InternalError: Error {
     case emptyData
     case serverError
     case clientError
+    
+    var errorDescription: String? {
+        switch self {
+        default:
+            return String(describing: self)
+        }
+    }
 }

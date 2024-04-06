@@ -23,8 +23,6 @@ protocol ImageGalleryViewModelProtocol {
 // MARK: - ImageGalleryViewModel
 
 final class ImageGalleryViewModel {
-    weak var view: ImageGalleryViewControllerProtocol?
-    
     var currentPage: Int = 0
     var isLoading: Bool = false
     var pages: UnsplasPage = []
@@ -44,7 +42,7 @@ extension ImageGalleryViewModel: ImageGalleryViewModelProtocol {
                 currentPage += 1
                 success(true)
             case .failure(let failure):
-                debugPrint("❌ page downloading")
+                debugPrint("❌ page downloading error: \(failure.localizedDescription)")
                 success(false)
             }
             isLoading = false

@@ -11,6 +11,7 @@ import UIKit
 
 protocol MainRouterProtocol {
     func showImageGalleryScreen()
+    func showImageDetailScreen(with pageItem: UnsplashPageItem)
 }
 
 // MARK: - MainRouter
@@ -24,6 +25,11 @@ final class MainRouter {
 }
 
 extension MainRouter: MainRouterProtocol {
+    func showImageDetailScreen(with pageItem: UnsplashPageItem) {
+        let imageDetailScreen = ImageDetailModuleConfigurator.instantiateModule(currentItem: pageItem)
+        window.rootViewController?.present(imageDetailScreen, animated: true)
+    }
+    
     func showImageGalleryScreen() {
         let imageGalleryScreen = ImageGalleryModuleConfigurator.instantiateModule()
         window.rootViewController = imageGalleryScreen

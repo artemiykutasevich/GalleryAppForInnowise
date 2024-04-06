@@ -17,15 +17,15 @@ struct UnsplashPageItem: Codable {
     let id: String
 //    let slug: String
 //    let alternativeSlugs: UnsplashAlternativeSlugs
-//    let createdAt: Date
+    let createdAt: String
 //    let updatedAt: Date
 //    let promotedAt: Date?
     let width: Int
     let height: Int
 //    let color: String
 //    let blurHash: String
-//    let description: String?
-//    let altDescription: String
+    let description: String?
+    let altDescription: String
 //    let breadcrumbs: [JSONAny]
     let urls: UnsplashUrls
     let links: UnsplashLinks
@@ -41,13 +41,13 @@ struct UnsplashPageItem: Codable {
         case id, urls, links, width, height
 //        case slug
 //        case alternativeSlugs = "alternative_slugs"
-//        case createdAt = "created_at"
+        case createdAt = "created_at"
 //        case updatedAt = "updated_at"
 //        case promotedAt = "promoted_at"
 //        case color
 //        case blurHash = "blur_hash"
-//        case description
-//        case altDescription = "alt_description"
+        case description
+        case altDescription = "alt_description"
 //        case breadcrumbs
 //        case likes
 //        case likedByUser = "liked_by_user"
