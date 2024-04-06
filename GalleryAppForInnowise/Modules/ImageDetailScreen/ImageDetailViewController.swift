@@ -36,7 +36,7 @@ final class ImageDetailViewController: BaseViewController, ImageDetailController
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        debugPrint("👀 Image Gallery Screen")
+        debugPrint("👀 Image Detail Screen")
     }
 
     // Functions
