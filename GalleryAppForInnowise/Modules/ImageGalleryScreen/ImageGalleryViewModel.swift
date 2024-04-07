@@ -28,13 +28,13 @@ final class ImageGalleryViewModel {
     var pages: Page {
         get { isLiked ? likedPages : downloadedPages }
     }
-    
+
     var isLiked: Bool = false
-    
+
     var downloadedPages: Page = []
-    
+
     lazy var coreDataService: CoreDataServiceProtocol = serviceLocator.getService()
-    
+
     var likedPages: Page {
         get { coreDataService.getFavorites().filter({ $0.isFavorite }) }
     }

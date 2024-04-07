@@ -83,7 +83,8 @@ final class ImageGalleryViewController: BaseViewController, ImageGalleryViewCont
         if success {
             collectionView.reloadData()
         } else {
-            // TODO: ADD warning alert
+            let service: AlertRouterProtocol = serviceLocator.getService()
+            service.openWarningAlert(of: .pageLoading)
         }
     }
 

@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         serviceLocator = registry
         guard let window = window else { return }
         registry.addService({ MainRouter(window: window) as MainRouterProtocol })
+        registry.addService({ AlertRouter(window: window) as AlertRouterProtocol })
         registry.addService({ WebService() as WebServiceProtocol })
         registry.addService({ BaseProvider() as BaseProviderProtocol })
         registry.addService({ CoreDataService() as CoreDataServiceProtocol })

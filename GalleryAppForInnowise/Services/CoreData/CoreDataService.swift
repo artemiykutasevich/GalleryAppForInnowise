@@ -12,6 +12,7 @@ import CoreData
 
 protocol CoreDataServiceProtocol {
     func getFavorites() -> [PageItem]
+    func isFavorite(item: PageItem) -> Bool
     func addFavorite(item: PageItem)
     func removeFavorite(item: PageItem)
 }
@@ -66,6 +67,14 @@ extension CoreDataService: CoreDataServiceProtocol {
         } catch {
             debugPrint("❌ CoreDataService: can't fetch favorites  \(error.localizedDescription)")
             return []
+        }
+    }
+
+    func isFavorite(item: PageItem) -> Bool {
+        if let item = findItem(with: item.id) {
+            return item.cdFavorite
+        } else {
+            return false
         }
     }
 

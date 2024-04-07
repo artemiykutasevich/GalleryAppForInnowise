@@ -19,6 +19,10 @@ final class ImageDetailViewModel: ImageDetailViewModelProtocol {
     var currentItem: PageItem
 
     init(currentItem: PageItem) {
+        let service: CoreDataServiceProtocol = serviceLocator.getService()
+        if service.isFavorite(item: currentItem) {
+            currentItem.isFavorite = true
+        }
         self.currentItem = currentItem
     }
 }
