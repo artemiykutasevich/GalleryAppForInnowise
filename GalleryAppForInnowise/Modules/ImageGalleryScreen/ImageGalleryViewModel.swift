@@ -13,7 +13,7 @@ import Combine
 protocol ImageGalleryViewModelProtocol {
     var currentPage: Int { get set }
     var isLoading: Bool { get set }
-    var pages: Page { get set }
+    var pages: Page { get }
     var isLiked: Bool { get set }
 
     func loadPage(completion success: @escaping (Bool) -> Void)
@@ -25,20 +25,31 @@ protocol ImageGalleryViewModelProtocol {
 final class ImageGalleryViewModel {
     var currentPage: Int = 0
     var isLoading: Bool = false
-    var pages: Page = []
+    var pages: Page {
+        get { isLiked ? likedPages : downloadedPages }
+    }
+    
     var isLiked: Bool = false
+    
+    var downloadedPages: Page = []
+    
+    lazy var coreDataService: CoreDataServiceProtocol = serviceLocator.getService()
+    
+    var likedPages: Page {
+        get { coreDataService.getFavorites().filter({ $0.isFavorite }) }
+    }
 }
 
 extension ImageGalleryViewModel: ImageGalleryViewModelProtocol {
     func loadPage(completion success: @escaping (Bool) -> Void) {
-        guard !isLoading else { return }
+        guard !isLoading, !isLiked else { return }
         isLoading = true
         let provider: BaseProviderProtocol = serviceLocator.getService()
         provider.getPage(with: currentPage) { [weak self] result in
             guard let self else { return }
             switch result {
             case .success(let newPages):
-                pages.append(contentsOf: newPages.toPage())
+                downloadedPages.append(contentsOf: newPages.toPage())
                 currentPage += 1
                 success(true)
             case .failure(let failure):
@@ -50,6 +61,7 @@ extension ImageGalleryViewModel: ImageGalleryViewModelProtocol {
     }
 
     func checkIfNeedToLoadNextPage(_ scrollView: UIScrollView, completion success: @escaping (Bool) -> Void) {
+        guard !isLiked else { return }
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
         let height = scrollView.frame.size.height

@@ -61,5 +61,12 @@ final class ImageDetailViewController: BaseViewController, ImageDetailController
         TapticEngine.select()
         viewModel.currentItem.isFavorite.toggle()
         likeButton.configure(isLiked: viewModel.currentItem.isFavorite)
+        
+        let coreDataService: CoreDataServiceProtocol = serviceLocator.getService()
+        if viewModel.currentItem.isFavorite {
+            coreDataService.addFavorite(item: viewModel.currentItem)
+        } else {
+            coreDataService.removeFavorite(item: viewModel.currentItem)
+        }
     }
 }

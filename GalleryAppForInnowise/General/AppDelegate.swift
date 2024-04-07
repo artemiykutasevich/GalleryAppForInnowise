@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         registry.addService({ MainRouter(window: window) as MainRouterProtocol })
         registry.addService({ WebService() as WebServiceProtocol })
         registry.addService({ BaseProvider() as BaseProviderProtocol })
+        registry.addService({ CoreDataService() as CoreDataServiceProtocol })
     }
 
     fileprivate func setupRootViewController() {

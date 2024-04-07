@@ -14,6 +14,8 @@
 		EA23D5F22BBB26890070E423 /* UnsplashProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA23D5F12BBB26890070E423 /* UnsplashProvider.swift */; };
 		EA26353E2BC1CAE100B4EAC4 /* Date + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26353D2BC1CAE100B4EAC4 /* Date + Extensions.swift */; };
 		EA2635402BC1CED600B4EAC4 /* String + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26353F2BC1CED600B4EAC4 /* String + Extensions.swift */; };
+		EA2635422BC1D83700B4EAC4 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2635412BC1D83700B4EAC4 /* CoreDataService.swift */; };
+		EA2635452BC1D93F00B4EAC4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2635442BC1D93F00B4EAC4 /* CoreDataStack.swift */; };
 		EA286C032BC1FF9C0029C480 /* CGFloat + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA286C022BC1FF9C0029C480 /* CGFloat + Extensions.swift */; };
 		EA286C052BC210610029C480 /* TapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA286C042BC210610029C480 /* TapticEngine.swift */; };
 		EA286C072BC211010029C480 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA286C062BC211010029C480 /* LikeButton.swift */; };
@@ -91,6 +93,8 @@
 		EA23D5F12BBB26890070E423 /* UnsplashProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashProvider.swift; sourceTree = "<group>"; };
 		EA26353D2BC1CAE100B4EAC4 /* Date + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extensions.swift"; sourceTree = "<group>"; };
 		EA26353F2BC1CED600B4EAC4 /* String + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extensions.swift"; sourceTree = "<group>"; };
+		EA2635412BC1D83700B4EAC4 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		EA2635442BC1D93F00B4EAC4 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		EA286C022BC1FF9C0029C480 /* CGFloat + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat + Extensions.swift"; sourceTree = "<group>"; };
 		EA286C042BC210610029C480 /* TapticEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapticEngine.swift; sourceTree = "<group>"; };
 		EA286C062BC211010029C480 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
@@ -230,6 +234,14 @@
 			path = WebServiceModels;
 			sourceTree = "<group>";
 		};
+		EA2635432BC1D92E00B4EAC4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EA2635442BC1D93F00B4EAC4 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		EA2635462BC1E02200B4EAC4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +276,7 @@
 		EA5B1BA62BB98BBC00245FBC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				EA2635432BC1D92E00B4EAC4 /* CoreData */,
 				EAC584C12BBDBFB8001BD988 /* UI */,
 				EA81980D2BBB2F1D00CFBCFE /* Reachability.swift */,
 				EA637BC22BBC9DB800EB3FB7 /* BenchTimer.swift */,
@@ -312,6 +325,7 @@
 		EA5B1BAC2BB999DD00245FBC /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				EA2635412BC1D83700B4EAC4 /* CoreDataService.swift */,
 				EABF428C2BB8848D004BA85A /* GalleryAppForInnowise.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -701,10 +715,12 @@
 				EA8198092BBB2D1400CFBCFE /* WebService.swift in Sources */,
 				EAC584C32BBDBFDE001BD988 /* BaseCollectionViewCell.swift in Sources */,
 				EAC584B32BBD9D0B001BD988 /* PinterestLayout.swift in Sources */,
+				EA2635452BC1D93F00B4EAC4 /* CoreDataStack.swift in Sources */,
 				EA5B1BB82BB9ED8400245FBC /* ImageDetailViewModel.swift in Sources */,
 				EAC584BC2BBDBED3001BD988 /* UICollectionView + Extensions.swift in Sources */,
 				EAC584C92BBDC6DB001BD988 /* ScaleFactor.swift in Sources */,
 				EAD773612BBF66FF005F27B6 /* ImageDetailVoduleConfigurator.swift in Sources */,
+				EA2635422BC1D83700B4EAC4 /* CoreDataService.swift in Sources */,
 				EA286C032BC1FF9C0029C480 /* CGFloat + Extensions.swift in Sources */,
 				EA286C072BC211010029C480 /* LikeButton.swift in Sources */,
 				EA8198132BBB466700CFBCFE /* UnsplashModels.swift in Sources */,

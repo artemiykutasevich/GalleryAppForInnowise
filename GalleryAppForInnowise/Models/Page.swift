@@ -38,6 +38,11 @@ class PageItemPost {
     let title: String
     let description: String?
 
+    init() {
+        self.title = ""
+        self.description = ""
+    }
+
     init(title: String, description: String?) {
         self.title = title
         self.description = description
@@ -49,6 +54,11 @@ class PageItemPost {
 class PageItemURL {
     let small: String
     let regular: String
+
+    init() {
+        self.small = ""
+        self.regular = ""
+    }
 
     init(small: String, regular: String) {
         self.small = small
