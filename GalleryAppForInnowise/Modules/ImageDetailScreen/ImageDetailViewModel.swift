@@ -10,17 +10,19 @@ import Foundation
 // MARK: - ImageDetailViewModelProtocol
 
 protocol ImageDetailViewModelProtocol {
-    var currentItem: UnsplashPageItem { get set }
+    var currentItem: PageItem { get set }
 }
 
 // MARK: - ImageDetailViewModel
 
-final class ImageDetailViewModel {
-    var currentItem: UnsplashPageItem
-    
-    init(currentItem: UnsplashPageItem) {
+final class ImageDetailViewModel: ImageDetailViewModelProtocol {
+    var currentItem: PageItem
+
+    init(currentItem: PageItem) {
+        let service: CoreDataServiceProtocol = serviceLocator.getService()
+        if service.isFavorite(item: currentItem) {
+            currentItem.isFavorite = true
+        }
         self.currentItem = currentItem
     }
 }
-
-extension ImageDetailViewModel: ImageDetailViewModelProtocol {}

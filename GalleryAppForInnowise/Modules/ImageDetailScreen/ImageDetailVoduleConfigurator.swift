@@ -9,7 +9,7 @@ import Foundation
 
 final class ImageDetailModuleConfigurator {
 
-    static func instantiateModule(currentItem: UnsplashPageItem) -> ImageDetailViewController {
+    static func instantiateModule(currentItem: PageItem) -> ImageDetailViewController {
         let controller: ImageDetailViewController = ImageDetailViewController.instantiate()
         let viewModel = ImageDetailViewModel(currentItem: currentItem)
         controller.viewModel = viewModel

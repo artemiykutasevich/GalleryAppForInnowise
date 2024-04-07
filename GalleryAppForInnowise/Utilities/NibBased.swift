@@ -7,7 +7,7 @@
 
 import UIKit
 
-//swiftlint:disable all
+// swiftlint:disable all
 
 // MARK: - NibBased
 
@@ -45,4 +45,4 @@ extension NibBased where Self: UICollectionViewCell {
     }
 }
 
-//swiftlint:enable all
+// swiftlint:enable all

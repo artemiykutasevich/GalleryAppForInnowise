@@ -14,6 +14,13 @@
 		EA23D5F22BBB26890070E423 /* UnsplashProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA23D5F12BBB26890070E423 /* UnsplashProvider.swift */; };
 		EA26353E2BC1CAE100B4EAC4 /* Date + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26353D2BC1CAE100B4EAC4 /* Date + Extensions.swift */; };
 		EA2635402BC1CED600B4EAC4 /* String + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26353F2BC1CED600B4EAC4 /* String + Extensions.swift */; };
+		EA2635422BC1D83700B4EAC4 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2635412BC1D83700B4EAC4 /* CoreDataService.swift */; };
+		EA2635452BC1D93F00B4EAC4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2635442BC1D93F00B4EAC4 /* CoreDataStack.swift */; };
+		EA286C032BC1FF9C0029C480 /* CGFloat + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA286C022BC1FF9C0029C480 /* CGFloat + Extensions.swift */; };
+		EA286C052BC210610029C480 /* TapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA286C042BC210610029C480 /* TapticEngine.swift */; };
+		EA286C072BC211010029C480 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA286C062BC211010029C480 /* LikeButton.swift */; };
+		EA286C0B2BC2DF7B0029C480 /* AlertRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA286C0A2BC2DF7B0029C480 /* AlertRouter.swift */; };
+		EA286C0D2BC2E0BE0029C480 /* AlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA286C0C2BC2E0BE0029C480 /* AlertType.swift */; };
 		EA5B1BAA2BB98C3B00245FBC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BA92BB98C3B00245FBC /* Constants.swift */; };
 		EA5B1BB12BB9EC4600245FBC /* ImageGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB02BB9EC4600245FBC /* ImageGalleryViewController.swift */; };
 		EA5B1BB42BB9ECF100245FBC /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB32BB9ECF100245FBC /* ImageDetailViewController.swift */; };
@@ -31,6 +38,8 @@
 		EA8198132BBB466700CFBCFE /* UnsplashModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8198122BBB466700CFBCFE /* UnsplashModels.swift */; };
 		EA8198152BBB49E300CFBCFE /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8198142BBB49E300CFBCFE /* RequestData.swift */; };
 		EA8198172BBB4D7400CFBCFE /* URLRequest + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8198162BBB4D7400CFBCFE /* URLRequest + Extensions.swift */; };
+		EA8BCF3D2BC1F5E400CAE0DA /* Double + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8BCF3C2BC1F5E400CAE0DA /* Double + Extensions.swift */; };
+		EA8BCF3F2BC1F6DB00CAE0DA /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8BCF3E2BC1F6DB00CAE0DA /* Page.swift */; };
 		EABF42842BB8848D004BA85A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF42832BB8848D004BA85A /* AppDelegate.swift */; };
 		EABF42882BB8848D004BA85A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF42872BB8848D004BA85A /* ViewController.swift */; };
 		EABF428B2BB8848D004BA85A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EABF428A2BB8848D004BA85A /* Base */; };
@@ -86,6 +95,13 @@
 		EA23D5F12BBB26890070E423 /* UnsplashProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashProvider.swift; sourceTree = "<group>"; };
 		EA26353D2BC1CAE100B4EAC4 /* Date + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extensions.swift"; sourceTree = "<group>"; };
 		EA26353F2BC1CED600B4EAC4 /* String + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extensions.swift"; sourceTree = "<group>"; };
+		EA2635412BC1D83700B4EAC4 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		EA2635442BC1D93F00B4EAC4 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		EA286C022BC1FF9C0029C480 /* CGFloat + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat + Extensions.swift"; sourceTree = "<group>"; };
+		EA286C042BC210610029C480 /* TapticEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapticEngine.swift; sourceTree = "<group>"; };
+		EA286C062BC211010029C480 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
+		EA286C0A2BC2DF7B0029C480 /* AlertRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertRouter.swift; sourceTree = "<group>"; };
+		EA286C0C2BC2E0BE0029C480 /* AlertType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertType.swift; sourceTree = "<group>"; };
 		EA5B1BA92BB98C3B00245FBC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EA5B1BB02BB9EC4600245FBC /* ImageGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewController.swift; sourceTree = "<group>"; };
 		EA5B1BB32BB9ECF100245FBC /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +120,8 @@
 		EA8198122BBB466700CFBCFE /* UnsplashModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashModels.swift; sourceTree = "<group>"; };
 		EA8198142BBB49E300CFBCFE /* RequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestData.swift; sourceTree = "<group>"; };
 		EA8198162BBB4D7400CFBCFE /* URLRequest + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest + Extensions.swift"; sourceTree = "<group>"; };
+		EA8BCF3C2BC1F5E400CAE0DA /* Double + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double + Extensions.swift"; sourceTree = "<group>"; };
+		EA8BCF3E2BC1F6DB00CAE0DA /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		EABF42802BB8848D004BA85A /* GalleryAppForInnowise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryAppForInnowise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABF42832BB8848D004BA85A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EABF42872BB8848D004BA85A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +238,22 @@
 			path = WebServiceModels;
 			sourceTree = "<group>";
 		};
+		EA2635432BC1D92E00B4EAC4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EA2635442BC1D93F00B4EAC4 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		EA2635462BC1E02200B4EAC4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EA286C062BC211010029C480 /* LikeButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		EA5B1BA42BB987C200245FBC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +271,8 @@
 				EAC584BB2BBDBED3001BD988 /* UICollectionView + Extensions.swift */,
 				EA8198162BBB4D7400CFBCFE /* URLRequest + Extensions.swift */,
 				EA26353F2BC1CED600B4EAC4 /* String + Extensions.swift */,
+				EA8BCF3C2BC1F5E400CAE0DA /* Double + Extensions.swift */,
+				EA286C022BC1FF9C0029C480 /* CGFloat + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -244,12 +280,14 @@
 		EA5B1BA62BB98BBC00245FBC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				EA2635432BC1D92E00B4EAC4 /* CoreData */,
 				EAC584C12BBDBFB8001BD988 /* UI */,
 				EA81980D2BBB2F1D00CFBCFE /* Reachability.swift */,
 				EA637BC22BBC9DB800EB3FB7 /* BenchTimer.swift */,
 				EAC584B22BBD9D0B001BD988 /* PinterestLayout.swift */,
 				EAC584BD2BBDBEFF001BD988 /* ReusableView.swift */,
 				EAC584BF2BBDBF65001BD988 /* NibBased.swift */,
+				EA286C042BC210610029C480 /* TapticEngine.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -291,6 +329,7 @@
 		EA5B1BAC2BB999DD00245FBC /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				EA2635412BC1D83700B4EAC4 /* CoreDataService.swift */,
 				EABF428C2BB8848D004BA85A /* GalleryAppForInnowise.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -323,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				EA637BC92BBCB47400EB3FB7 /* MainRouter.swift */,
+				EA286C0A2BC2DF7B0029C480 /* AlertRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -333,6 +373,15 @@
 				EA81980B2BBB2E1F00CFBCFE /* InternalError.swift */,
 			);
 			path = ErrorHandling;
+			sourceTree = "<group>";
+		};
+		EA8BCF3B2BC1F53300CAE0DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA8BCF3E2BC1F6DB00CAE0DA /* Page.swift */,
+				EA286C0C2BC2E0BE0029C480 /* AlertType.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		EABF42772BB8848C004BA85A = {
@@ -363,6 +412,8 @@
 			children = (
 				EA5B1BA82BB98C1300245FBC /* General */,
 				EA5B1BA42BB987C200245FBC /* Modules */,
+				EA8BCF3B2BC1F53300CAE0DA /* Models */,
+				EA2635462BC1E02200B4EAC4 /* Components */,
 				EA5B1BAB2BB999CE00245FBC /* Services */,
 				EA5B1BA62BB98BBC00245FBC /* Utilities */,
 				EA5B1BA52BB98B1A00245FBC /* Extensions */,
@@ -670,13 +721,18 @@
 				EA8198092BBB2D1400CFBCFE /* WebService.swift in Sources */,
 				EAC584C32BBDBFDE001BD988 /* BaseCollectionViewCell.swift in Sources */,
 				EAC584B32BBD9D0B001BD988 /* PinterestLayout.swift in Sources */,
+				EA2635452BC1D93F00B4EAC4 /* CoreDataStack.swift in Sources */,
 				EA5B1BB82BB9ED8400245FBC /* ImageDetailViewModel.swift in Sources */,
 				EAC584BC2BBDBED3001BD988 /* UICollectionView + Extensions.swift in Sources */,
 				EAC584C92BBDC6DB001BD988 /* ScaleFactor.swift in Sources */,
 				EAD773612BBF66FF005F27B6 /* ImageDetailVoduleConfigurator.swift in Sources */,
+				EA2635422BC1D83700B4EAC4 /* CoreDataService.swift in Sources */,
+				EA286C032BC1FF9C0029C480 /* CGFloat + Extensions.swift in Sources */,
+				EA286C072BC211010029C480 /* LikeButton.swift in Sources */,
 				EA8198132BBB466700CFBCFE /* UnsplashModels.swift in Sources */,
 				EA637BC52BBCA81C00EB3FB7 /* ImageDownloadProvider.swift in Sources */,
 				EAC584C02BBDBF65001BD988 /* NibBased.swift in Sources */,
+				EA8BCF3F2BC1F6DB00CAE0DA /* Page.swift in Sources */,
 				EA5B1BAA2BB98C3B00245FBC /* Constants.swift in Sources */,
 				EAC584BE2BBDBEFF001BD988 /* ReusableView.swift in Sources */,
 				EA637BCC2BBCB59200EB3FB7 /* ImageGalleryModuleConfigurator.swift in Sources */,
@@ -689,11 +745,15 @@
 				EA637BC72BBCB2B000EB3FB7 /* PrivateConstants.swift in Sources */,
 				EA637BC32BBC9DB800EB3FB7 /* BenchTimer.swift in Sources */,
 				EA81980E2BBB2F1D00CFBCFE /* Reachability.swift in Sources */,
+				EA8BCF3D2BC1F5E400CAE0DA /* Double + Extensions.swift in Sources */,
+				EA286C0D2BC2E0BE0029C480 /* AlertType.swift in Sources */,
 				EA637BCE2BBCB8C300EB3FB7 /* ServiceLocator.swift in Sources */,
 				EABF42842BB8848D004BA85A /* AppDelegate.swift in Sources */,
 				EA5B1BB62BB9ED6100245FBC /* ImageGalleryViewModel.swift in Sources */,
 				EA23D5F22BBB26890070E423 /* UnsplashProvider.swift in Sources */,
 				EA8198172BBB4D7400CFBCFE /* URLRequest + Extensions.swift in Sources */,
+				EA286C0B2BC2DF7B0029C480 /* AlertRouter.swift in Sources */,
+				EA286C052BC210610029C480 /* TapticEngine.swift in Sources */,
 				EAC584BA2BBDA1C3001BD988 /* ImageGalleryCell.swift in Sources */,
 				EABF428E2BB8848D004BA85A /* GalleryAppForInnowise.xcdatamodeld in Sources */,
 				EA26353E2BC1CAE100B4EAC4 /* Date + Extensions.swift in Sources */,

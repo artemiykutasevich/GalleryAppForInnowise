@@ -1,4 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23D56" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDPageItem" representedClassName="CDPageItem" syncable="YES" codeGenerationType="class">
+        <attribute name="cdCreateDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="cdFavorite" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="cdID" attributeType="String" defaultValueString=""/>
+        <relationship name="cdLinks" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDPageItemURL" inverseName="cdPage" inverseEntity="CDPageItemURL"/>
+        <relationship name="cdPost" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDPageItemPost" inverseName="cdPage" inverseEntity="CDPageItemPost"/>
+        <relationship name="cdSize" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDPageItemSize" inverseName="cdPage" inverseEntity="CDPageItemSize"/>
+    </entity>
+    <entity name="CDPageItemPost" representedClassName="CDPageItemPost" syncable="YES" codeGenerationType="class">
+        <attribute name="cdDescription" optional="YES" attributeType="String"/>
+        <attribute name="cdTitle" attributeType="String" defaultValueString=""/>
+        <relationship name="cdPage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDPageItem" inverseName="cdPost" inverseEntity="CDPageItem"/>
+    </entity>
+    <entity name="CDPageItemSize" representedClassName="CDPageItemSize" syncable="YES" codeGenerationType="class">
+        <attribute name="cdHeight" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="cdWidth" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="cdPage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDPageItem" inverseName="cdSize" inverseEntity="CDPageItem"/>
+    </entity>
+    <entity name="CDPageItemURL" representedClassName="CDPageItemURL" syncable="YES" codeGenerationType="class">
+        <attribute name="cdPreview" attributeType="String" defaultValueString=""/>
+        <attribute name="cdRegular" attributeType="String" defaultValueString=""/>
+        <relationship name="cdPage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDPageItem" inverseName="cdLinks" inverseEntity="CDPageItem"/>
+    </entity>
 </model>

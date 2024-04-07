@@ -19,7 +19,7 @@ enum InternalError: LocalizedError {
     case emptyData
     case serverError
     case clientError
-    
+
     var errorDescription: String? {
         switch self {
         default:

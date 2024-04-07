@@ -18,6 +18,7 @@ final class ImageGalleryViewController: BaseViewController, ImageGalleryViewCont
     // @IBOutlets
 
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var likeButton: LikeButton!
 
     // Properties
 
@@ -35,6 +36,7 @@ final class ImageGalleryViewController: BaseViewController, ImageGalleryViewCont
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureOutlets()
         configureCollectionView()
     }
 
@@ -52,6 +54,11 @@ final class ImageGalleryViewController: BaseViewController, ImageGalleryViewCont
     }
 
     // Functions
+
+    private func configureOutlets() {
+        likeButton.configure(isLiked: viewModel.isLiked)
+        likeButton.addTarget(self, action: #selector(likeButtonAction), for: .touchUpInside)
+    }
 
     private func configureCollectionView() {
         collectionView.dataSource = self
@@ -76,8 +83,18 @@ final class ImageGalleryViewController: BaseViewController, ImageGalleryViewCont
         if success {
             collectionView.reloadData()
         } else {
-            // TODO: ADD warning alert
+            let service: AlertRouterProtocol = serviceLocator.getService()
+            service.openWarningAlert(of: .pageLoading)
         }
+    }
+
+    // @objc Functions
+
+    @objc private func likeButtonAction() {
+        TapticEngine.select()
+        viewModel.isLiked.toggle()
+        likeButton.configure(isLiked: viewModel.isLiked)
+        collectionView.reloadData()
     }
 }
 
@@ -90,7 +107,7 @@ extension ImageGalleryViewController: UICollectionViewDataSource {
 
     // swiftlint:disable:next line_length
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let item: UnsplashPageItem = viewModel.pages[indexPath.row]
+        let item = viewModel.pages[indexPath.row]
         let cell: ImageGalleryCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
         cell.configure(with: item)
         return cell
@@ -99,11 +116,12 @@ extension ImageGalleryViewController: UICollectionViewDataSource {
 
 extension ImageGalleryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        TapticEngine.select()
         let pageItem = viewModel.pages[indexPath.item]
         let mainRouter: MainRouterProtocol = serviceLocator.getService()
         mainRouter.showImageDetailScreen(with: pageItem)
     }
-    
+
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         viewModel.checkIfNeedToLoadNextPage(scrollView) { [weak self] success in
             guard let self else { return }
@@ -133,7 +151,7 @@ extension ImageGalleryViewController: PinterestLayoutDelegate {
     // swiftlint:disable:next line_length
     func collectionView(collectionView: UICollectionView, heightForImageAtIndexPath indexPath: IndexPath, withWidth: CGFloat) -> CGFloat {
         let item = viewModel.pages[indexPath.item]
-        let imageAspect: CGFloat = item.height.toCGFloat() / item.width.toCGFloat()
+        let imageAspect: CGFloat = item.size.height / item.size.width
         let cellWidth: CGFloat = calculateCellWidth()
         return cellWidth * imageAspect
     }
