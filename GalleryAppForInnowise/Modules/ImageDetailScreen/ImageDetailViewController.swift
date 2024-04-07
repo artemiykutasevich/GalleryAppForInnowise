@@ -22,6 +22,7 @@ final class ImageDetailViewController: BaseViewController, ImageDetailController
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descritionLabel: UILabel!
     @IBOutlet private weak var dataLabel: UILabel!
+    @IBOutlet private weak var likeButton: LikeButton!
 
     // Properties
 
@@ -43,6 +44,8 @@ final class ImageDetailViewController: BaseViewController, ImageDetailController
 
     private func configureOutlets() {
         let currentItem = viewModel.currentItem
+        likeButton.configure(isLiked: currentItem.isFavorite)
+        likeButton.addTarget(self, action: #selector(likeButtonAction), for: .touchUpInside)
         titleLabel.text = currentItem.post.title
         let description: String = currentItem.post.description ?? String()
         descritionLabel.text = description.isEmpty ? "No description" : description
@@ -50,5 +53,13 @@ final class ImageDetailViewController: BaseViewController, ImageDetailController
         guard let url = URL(string: currentItem.urls.regular) else { return }
         imageView.kf.setImage(with: url)
         blurredImageView.kf.setImage(with: url)
+    }
+
+    // @objc Functions
+
+    @objc private func likeButtonAction() {
+        TapticEngine.select()
+        viewModel.currentItem.isFavorite.toggle()
+        likeButton.configure(isLiked: viewModel.currentItem.isFavorite)
     }
 }

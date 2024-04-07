@@ -15,6 +15,7 @@
                 <outlet property="dataLabel" destination="Jsk-81-v8I" id="nVC-p1-EKq"/>
                 <outlet property="descritionLabel" destination="vXb-KA-hvZ" id="38Y-xI-CgM"/>
                 <outlet property="imageView" destination="XSn-KL-3ym" id="nRa-AA-GGj"/>
+                <outlet property="likeButton" destination="6UO-Jm-8s3" id="WCa-rP-1FU"/>
                 <outlet property="titleLabel" destination="Dy3-3M-OL1" id="GZr-c2-IPd"/>
                 <outlet property="view" destination="iN0-l3-epB" id="UPP-yr-k4Q"/>
             </connections>
@@ -41,6 +42,17 @@
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XSn-KL-3ym">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="393"/>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UO-Jm-8s3" customClass="LikeButton" customModule="GalleryAppForInnowise" customModuleProvider="target">
+                            <rect key="frame" x="313" y="313" width="64" height="64"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="6UO-Jm-8s3" secondAttribute="height" multiplier="1:1" id="mHz-ww-RAh"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system">
+                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23" scale="large"/>
+                            </buttonConfiguration>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
@@ -56,6 +68,8 @@
                         <constraint firstAttribute="trailing" secondItem="5P4-k2-PdN" secondAttribute="trailing" id="aBT-Zg-JAb"/>
                         <constraint firstItem="5P4-k2-PdN" firstAttribute="top" secondItem="NCW-ot-Vn5" secondAttribute="top" id="c6Z-ds-gfV"/>
                         <constraint firstItem="XSn-KL-3ym" firstAttribute="leading" secondItem="NCW-ot-Vn5" secondAttribute="leading" id="hV0-6z-d8t"/>
+                        <constraint firstAttribute="trailing" secondItem="6UO-Jm-8s3" secondAttribute="trailing" constant="16" id="j9t-5A-hnD"/>
+                        <constraint firstAttribute="bottom" secondItem="6UO-Jm-8s3" secondAttribute="bottom" constant="16" id="juh-A0-ZKw"/>
                         <constraint firstAttribute="width" secondItem="NCW-ot-Vn5" secondAttribute="height" multiplier="1:1" id="m7y-TN-gsb"/>
                     </constraints>
                 </view>
@@ -116,6 +130,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NCW-ot-Vn5" secondAttribute="trailing" id="b39-b0-M2U"/>
                 <constraint firstItem="Dy3-3M-OL1" firstAttribute="top" secondItem="Rgm-Gv-6k7" secondAttribute="bottom" id="cwX-7E-h1c"/>
                 <constraint firstItem="Jsk-81-v8I" firstAttribute="top" secondItem="hmo-dX-rQj" secondAttribute="bottom" id="dnw-xK-PXQ"/>
+                <constraint firstItem="6UO-Jm-8s3" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.16285" id="gnG-TC-9n3"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Jsk-81-v8I" secondAttribute="trailing" constant="16" id="jE1-S2-VLV"/>
                 <constraint firstItem="hmo-dX-rQj" firstAttribute="top" secondItem="vXb-KA-hvZ" secondAttribute="bottom" id="lC2-sc-Fja"/>
                 <constraint firstItem="NCW-ot-Vn5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="o3c-u5-ai8"/>
@@ -129,6 +144,7 @@
         </view>
     </objects>
     <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

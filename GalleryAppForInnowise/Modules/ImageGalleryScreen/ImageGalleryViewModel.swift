@@ -14,6 +14,7 @@ protocol ImageGalleryViewModelProtocol {
     var currentPage: Int { get set }
     var isLoading: Bool { get set }
     var pages: Page { get set }
+    var isLiked: Bool { get set }
 
     func loadPage(completion success: @escaping (Bool) -> Void)
     func checkIfNeedToLoadNextPage(_ scrollView: UIScrollView, completion success: @escaping (Bool) -> Void)
@@ -25,6 +26,7 @@ final class ImageGalleryViewModel {
     var currentPage: Int = 0
     var isLoading: Bool = false
     var pages: Page = []
+    var isLiked: Bool = false
 }
 
 extension ImageGalleryViewModel: ImageGalleryViewModelProtocol {

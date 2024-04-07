@@ -18,6 +18,7 @@ final class ImageGalleryViewController: BaseViewController, ImageGalleryViewCont
     // @IBOutlets
 
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var likeButton: LikeButton!
 
     // Properties
 
@@ -35,6 +36,7 @@ final class ImageGalleryViewController: BaseViewController, ImageGalleryViewCont
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureOutlets()
         configureCollectionView()
     }
 
@@ -52,6 +54,11 @@ final class ImageGalleryViewController: BaseViewController, ImageGalleryViewCont
     }
 
     // Functions
+
+    private func configureOutlets() {
+        likeButton.configure(isLiked: viewModel.isLiked)
+        likeButton.addTarget(self, action: #selector(likeButtonAction), for: .touchUpInside)
+    }
 
     private func configureCollectionView() {
         collectionView.dataSource = self
@@ -79,6 +86,15 @@ final class ImageGalleryViewController: BaseViewController, ImageGalleryViewCont
             // TODO: ADD warning alert
         }
     }
+
+    // @objc Functions
+
+    @objc private func likeButtonAction() {
+        TapticEngine.select()
+        viewModel.isLiked.toggle()
+        likeButton.configure(isLiked: viewModel.isLiked)
+        collectionView.reloadData()
+    }
 }
 
 // MARK: - Collection View
@@ -99,6 +115,7 @@ extension ImageGalleryViewController: UICollectionViewDataSource {
 
 extension ImageGalleryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        TapticEngine.select()
         let pageItem = viewModel.pages[indexPath.item]
         let mainRouter: MainRouterProtocol = serviceLocator.getService()
         mainRouter.showImageDetailScreen(with: pageItem)

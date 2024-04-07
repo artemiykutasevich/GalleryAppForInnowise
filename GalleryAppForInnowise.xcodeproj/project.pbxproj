@@ -15,6 +15,8 @@
 		EA26353E2BC1CAE100B4EAC4 /* Date + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26353D2BC1CAE100B4EAC4 /* Date + Extensions.swift */; };
 		EA2635402BC1CED600B4EAC4 /* String + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26353F2BC1CED600B4EAC4 /* String + Extensions.swift */; };
 		EA286C032BC1FF9C0029C480 /* CGFloat + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA286C022BC1FF9C0029C480 /* CGFloat + Extensions.swift */; };
+		EA286C052BC210610029C480 /* TapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA286C042BC210610029C480 /* TapticEngine.swift */; };
+		EA286C072BC211010029C480 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA286C062BC211010029C480 /* LikeButton.swift */; };
 		EA5B1BAA2BB98C3B00245FBC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BA92BB98C3B00245FBC /* Constants.swift */; };
 		EA5B1BB12BB9EC4600245FBC /* ImageGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB02BB9EC4600245FBC /* ImageGalleryViewController.swift */; };
 		EA5B1BB42BB9ECF100245FBC /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB32BB9ECF100245FBC /* ImageDetailViewController.swift */; };
@@ -90,6 +92,8 @@
 		EA26353D2BC1CAE100B4EAC4 /* Date + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extensions.swift"; sourceTree = "<group>"; };
 		EA26353F2BC1CED600B4EAC4 /* String + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extensions.swift"; sourceTree = "<group>"; };
 		EA286C022BC1FF9C0029C480 /* CGFloat + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat + Extensions.swift"; sourceTree = "<group>"; };
+		EA286C042BC210610029C480 /* TapticEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapticEngine.swift; sourceTree = "<group>"; };
+		EA286C062BC211010029C480 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		EA5B1BA92BB98C3B00245FBC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EA5B1BB02BB9EC4600245FBC /* ImageGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewController.swift; sourceTree = "<group>"; };
 		EA5B1BB32BB9ECF100245FBC /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
@@ -226,6 +230,14 @@
 			path = WebServiceModels;
 			sourceTree = "<group>";
 		};
+		EA2635462BC1E02200B4EAC4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EA286C062BC211010029C480 /* LikeButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		EA5B1BA42BB987C200245FBC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +270,7 @@
 				EAC584B22BBD9D0B001BD988 /* PinterestLayout.swift */,
 				EAC584BD2BBDBEFF001BD988 /* ReusableView.swift */,
 				EAC584BF2BBDBF65001BD988 /* NibBased.swift */,
+				EA286C042BC210610029C480 /* TapticEngine.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -380,6 +393,7 @@
 				EA5B1BA82BB98C1300245FBC /* General */,
 				EA5B1BA42BB987C200245FBC /* Modules */,
 				EA8BCF3B2BC1F53300CAE0DA /* Models */,
+				EA2635462BC1E02200B4EAC4 /* Components */,
 				EA5B1BAB2BB999CE00245FBC /* Services */,
 				EA5B1BA62BB98BBC00245FBC /* Utilities */,
 				EA5B1BA52BB98B1A00245FBC /* Extensions */,
@@ -692,6 +706,7 @@
 				EAC584C92BBDC6DB001BD988 /* ScaleFactor.swift in Sources */,
 				EAD773612BBF66FF005F27B6 /* ImageDetailVoduleConfigurator.swift in Sources */,
 				EA286C032BC1FF9C0029C480 /* CGFloat + Extensions.swift in Sources */,
+				EA286C072BC211010029C480 /* LikeButton.swift in Sources */,
 				EA8198132BBB466700CFBCFE /* UnsplashModels.swift in Sources */,
 				EA637BC52BBCA81C00EB3FB7 /* ImageDownloadProvider.swift in Sources */,
 				EAC584C02BBDBF65001BD988 /* NibBased.swift in Sources */,
@@ -714,6 +729,7 @@
 				EA5B1BB62BB9ED6100245FBC /* ImageGalleryViewModel.swift in Sources */,
 				EA23D5F22BBB26890070E423 /* UnsplashProvider.swift in Sources */,
 				EA8198172BBB4D7400CFBCFE /* URLRequest + Extensions.swift in Sources */,
+				EA286C052BC210610029C480 /* TapticEngine.swift in Sources */,
 				EAC584BA2BBDA1C3001BD988 /* ImageGalleryCell.swift in Sources */,
 				EABF428E2BB8848D004BA85A /* GalleryAppForInnowise.xcdatamodeld in Sources */,
 				EA26353E2BC1CAE100B4EAC4 /* Date + Extensions.swift in Sources */,
