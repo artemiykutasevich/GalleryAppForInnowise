@@ -123,6 +123,7 @@
 		EA8198162BBB4D7400CFBCFE /* URLRequest + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest + Extensions.swift"; sourceTree = "<group>"; };
 		EA8BCF3C2BC1F5E400CAE0DA /* Double + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double + Extensions.swift"; sourceTree = "<group>"; };
 		EA8BCF3E2BC1F6DB00CAE0DA /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		EAB450432BC5E1FF000C4DEB /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		EABF42802BB8848D004BA85A /* GalleryAppForInnowise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryAppForInnowise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABF42832BB8848D004BA85A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EABF42872BB8848D004BA85A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -390,6 +391,7 @@
 		EABF42772BB8848C004BA85A = {
 			isa = PBXGroup;
 			children = (
+				EAB450432BC5E1FF000C4DEB /* .swiftlint.yml */,
 				EA5B1BB92BB9EF3A00245FBC /* README.md */,
 				EABF42822BB8848D004BA85A /* GalleryAppForInnowise */,
 				EABF429C2BB8848E004BA85A /* GalleryAppForInnowiseTests */,

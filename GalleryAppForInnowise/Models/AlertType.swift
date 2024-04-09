@@ -20,7 +20,7 @@ enum AlertType {
     enum Warning: AlertTypeProtocol {
         case pageLoading
         case unknown
-        
+
         var title: String {
             switch self {
             case .pageLoading:
@@ -29,7 +29,7 @@ enum AlertType {
                 return "⚠️ Ooops"
             }
         }
-        
+
         var messege: String {
             switch self {
             case .pageLoading:
