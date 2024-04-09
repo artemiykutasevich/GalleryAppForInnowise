@@ -62,6 +62,7 @@
 		EAC584C92BBDC6DB001BD988 /* ScaleFactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC584C82BBDC6DB001BD988 /* ScaleFactor.swift */; };
 		EAD7735F2BBF6622005F27B6 /* ImageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD7735E2BBF6622005F27B6 /* ImageDetailViewController.xib */; };
 		EAD773612BBF66FF005F27B6 /* ImageDetailVoduleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD773602BBF66FF005F27B6 /* ImageDetailVoduleConfigurator.swift */; };
+		EAEAE4DE2BC4802400D78F2D /* InfoPlistWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEAE4DD2BC4802400D78F2D /* InfoPlistWrappers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +149,7 @@
 		EAC584C82BBDC6DB001BD988 /* ScaleFactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleFactor.swift; sourceTree = "<group>"; };
 		EAD7735E2BBF6622005F27B6 /* ImageDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDetailViewController.xib; sourceTree = "<group>"; };
 		EAD773602BBF66FF005F27B6 /* ImageDetailVoduleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailVoduleConfigurator.swift; sourceTree = "<group>"; };
+		EAEAE4DD2BC4802400D78F2D /* InfoPlistWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPlistWrappers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +312,7 @@
 				EABF42832BB8848D004BA85A /* AppDelegate.swift */,
 				EA5B1BA92BB98C3B00245FBC /* Constants.swift */,
 				EA637BC62BBCB2B000EB3FB7 /* PrivateConstants.swift */,
+				EAEAE4DD2BC4802400D78F2D /* InfoPlistWrappers.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -735,6 +738,7 @@
 				EA8BCF3F2BC1F6DB00CAE0DA /* Page.swift in Sources */,
 				EA5B1BAA2BB98C3B00245FBC /* Constants.swift in Sources */,
 				EAC584BE2BBDBEFF001BD988 /* ReusableView.swift in Sources */,
+				EAEAE4DE2BC4802400D78F2D /* InfoPlistWrappers.swift in Sources */,
 				EA637BCC2BBCB59200EB3FB7 /* ImageGalleryModuleConfigurator.swift in Sources */,
 				EA637BCA2BBCB47400EB3FB7 /* MainRouter.swift in Sources */,
 				EABF42882BB8848D004BA85A /* ViewController.swift in Sources */,
