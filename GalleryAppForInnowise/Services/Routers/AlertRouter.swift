@@ -23,9 +23,8 @@ final class AlertRouter {
     }
 
     private func openAlert(of type: AlertTypeProtocol) {
-        let alertController = UIAlertController()
-        alertController.title = type.title
-        alertController.message = type.messege
+        let alertController = UIAlertController(title: type.title, message: type.messege, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default))
         window.rootViewController?.present(alertController, animated: true)
     }
 }
