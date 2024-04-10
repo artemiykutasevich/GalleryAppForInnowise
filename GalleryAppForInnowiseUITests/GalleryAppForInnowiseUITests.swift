@@ -7,6 +7,8 @@
 
 import XCTest
 
+// swiftlint: disable all
+
 final class GalleryAppForInnowiseUITests: XCTestCase {
 
     override func setUpWithError() throws {
@@ -39,3 +41,5 @@ final class GalleryAppForInnowiseUITests: XCTestCase {
         }
     }
 }
+
+// swiftlint: enable all

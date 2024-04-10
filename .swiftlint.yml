@@ -1,0 +1,10 @@
+included:
+- GalleryAppForInnowise
+- GalleryAppForInnowiseTests
+- GalleryAppForInnowiseUITests
+
+disabled_rules:
+- line_length
+- large_tuple
+- nesting
+- implicit_getter
