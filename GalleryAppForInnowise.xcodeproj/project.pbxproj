@@ -28,7 +28,6 @@
 		EA5B1BB82BB9ED8400245FBC /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB72BB9ED8400245FBC /* ImageDetailViewModel.swift */; };
 		EA637BC32BBC9DB800EB3FB7 /* BenchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA637BC22BBC9DB800EB3FB7 /* BenchTimer.swift */; };
 		EA637BC52BBCA81C00EB3FB7 /* ImageDownloadProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA637BC42BBCA81C00EB3FB7 /* ImageDownloadProvider.swift */; };
-		EA637BC72BBCB2B000EB3FB7 /* PrivateConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA637BC62BBCB2B000EB3FB7 /* PrivateConstants.swift */; };
 		EA637BCA2BBCB47400EB3FB7 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA637BC92BBCB47400EB3FB7 /* MainRouter.swift */; };
 		EA637BCC2BBCB59200EB3FB7 /* ImageGalleryModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA637BCB2BBCB59200EB3FB7 /* ImageGalleryModuleConfigurator.swift */; };
 		EA637BCE2BBCB8C300EB3FB7 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA637BCD2BBCB8C300EB3FB7 /* ServiceLocator.swift */; };
@@ -111,7 +110,6 @@
 		EA5B1BB92BB9EF3A00245FBC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EA637BC22BBC9DB800EB3FB7 /* BenchTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchTimer.swift; sourceTree = "<group>"; };
 		EA637BC42BBCA81C00EB3FB7 /* ImageDownloadProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadProvider.swift; sourceTree = "<group>"; };
-		EA637BC62BBCB2B000EB3FB7 /* PrivateConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateConstants.swift; sourceTree = "<group>"; };
 		EA637BC92BBCB47400EB3FB7 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		EA637BCB2BBCB59200EB3FB7 /* ImageGalleryModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryModuleConfigurator.swift; sourceTree = "<group>"; };
 		EA637BCD2BBCB8C300EB3FB7 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
@@ -312,7 +310,6 @@
 			children = (
 				EABF42832BB8848D004BA85A /* AppDelegate.swift */,
 				EA5B1BA92BB98C3B00245FBC /* Constants.swift */,
-				EA637BC62BBCB2B000EB3FB7 /* PrivateConstants.swift */,
 				EAEAE4DD2BC4802400D78F2D /* InfoPlistWrappers.swift */,
 			);
 			path = General;
@@ -748,7 +745,6 @@
 				EA5B1BB42BB9ECF100245FBC /* ImageDetailViewController.swift in Sources */,
 				EA5B1BB12BB9EC4600245FBC /* ImageGalleryViewController.swift in Sources */,
 				EA2635402BC1CED600B4EAC4 /* String + Extensions.swift in Sources */,
-				EA637BC72BBCB2B000EB3FB7 /* PrivateConstants.swift in Sources */,
 				EA637BC32BBC9DB800EB3FB7 /* BenchTimer.swift in Sources */,
 				EA81980E2BBB2F1D00CFBCFE /* Reachability.swift in Sources */,
 				EA8BCF3D2BC1F5E400CAE0DA /* Double + Extensions.swift in Sources */,
