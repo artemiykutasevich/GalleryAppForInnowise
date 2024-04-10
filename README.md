@@ -10,21 +10,19 @@ Application for displaying photos provided by `Unsplash API`. Additional informa
 
 Base implementation of Image Gallery Screen
 
-![Image Gallery Screen Default Example iPhone 15 Pro!](ImageGalleryScreen-Default.png)
-![Image Gallery Screen Favorites Example iPhone 15 Pro!](ImageGalleryScreen-Favorites.png)
+<img src="ImageGalleryScreen-Default.png" width="200"> <img src="ImageGalleryScreen-Favorites.png" width="200">
 
 - **Image Detail Screen**
 
 Detail screen provides the ability to save an image to favorites
 
-![Image Detail Screen Default Example iPhone 15 Pro!](ImageDetailScreen-Default.png)
-![Image Detail Screen Favorites Example iPhone 15 Pro!](ImageDetailScreen-Favorites.png)
+<img src="ImageDetailScreen-Default.png" width="200"> <img src="ImageDetailScreen-Favorite.png" width="200">
 
 - **Error Handling**
 
 Application support to handling errors
 
-![Error Handling!](Alerts.png)
+<img src="Alerts.png" width="200">
 
 ## Installation
 
@@ -54,18 +52,18 @@ The app supports `dark mode` and is made using system components and the UI is a
 The application outputs logs as it is used
 
 Example:
->> "✅ ServiceLocator: did register MainRouterProtocol" \
->> "✅ ServiceLocator: did register AlertRouterProtocol" \
->> "✅ ServiceLocator: did register WebServiceProtocol" \
->> "✅ ServiceLocator: did register BaseProviderProtocol" \
->> "✅ ServiceLocator: did register CoreDataServiceProtocol" \
->> "▶️ downloading" \
->> "👀 Image Gallery Screen" \
->> "⏸️ downloading end in: 0.7323719263076782" \
->> "👀 Image Detail Screen" \
->> "👀 Image Detail Screen" \
->> "▶️ downloading" \
->> "⏸️ downloading end in: 0.23850607872009277"
+> "✅ ServiceLocator: did register MainRouterProtocol" \
+> "✅ ServiceLocator: did register AlertRouterProtocol" \
+> "✅ ServiceLocator: did register WebServiceProtocol" \
+> "✅ ServiceLocator: did register BaseProviderProtocol" \
+> "✅ ServiceLocator: did register CoreDataServiceProtocol" \
+> "▶️ downloading" \
+> "👀 Image Gallery Screen" \
+> "⏸️ downloading end in: 0.7323719263076782" \
+> "👀 Image Detail Screen" \
+> "👀 Image Detail Screen" \
+> "▶️ downloading" \
+> "⏸️ downloading end in: 0.23850607872009277"
 
 ## Technical Description
 
@@ -74,6 +72,8 @@ Example:
 **Architecture:** MVVM
 
 **Tools:** Xcode, Interface Builder, Postman
+
+**Database:** Core Data
 
 **CocoaPods:**
 - **KingFisher** is used to download and cache images\
