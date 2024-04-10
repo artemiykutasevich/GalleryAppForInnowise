@@ -9,7 +9,7 @@ import Foundation
 
 final class Constants {
     enum Unsplash {
-        static let accessKey: String = InfoPlistWrappers.unsplashAccessKey ?? PrivateConstants.Unsplash.accessKey
+        static let accessKey: String = InfoPlistWrappers.unsplashAccessKey
         static let itemsPerPage: Int = 30
     }
 }
