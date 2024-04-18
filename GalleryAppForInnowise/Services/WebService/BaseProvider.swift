@@ -7,7 +7,7 @@
 
 // MARK: - BaseProviderProtocol
 
-protocol BaseProviderProtocol: UnsplashProviderProtocol, ImageDownloadProviderProtocol {}
+protocol BaseProviderProtocol: UnsplashProviderProtocol {}
 
 // MARK: - BaseProvider
 

@@ -27,7 +27,6 @@
 		EA5B1BB62BB9ED6100245FBC /* ImageGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB52BB9ED6100245FBC /* ImageGalleryViewModel.swift */; };
 		EA5B1BB82BB9ED8400245FBC /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1BB72BB9ED8400245FBC /* ImageDetailViewModel.swift */; };
 		EA637BC32BBC9DB800EB3FB7 /* BenchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA637BC22BBC9DB800EB3FB7 /* BenchTimer.swift */; };
-		EA637BC52BBCA81C00EB3FB7 /* ImageDownloadProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA637BC42BBCA81C00EB3FB7 /* ImageDownloadProvider.swift */; };
 		EA637BCA2BBCB47400EB3FB7 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA637BC92BBCB47400EB3FB7 /* MainRouter.swift */; };
 		EA637BCC2BBCB59200EB3FB7 /* ImageGalleryModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA637BCB2BBCB59200EB3FB7 /* ImageGalleryModuleConfigurator.swift */; };
 		EA637BCE2BBCB8C300EB3FB7 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA637BCD2BBCB8C300EB3FB7 /* ServiceLocator.swift */; };
@@ -60,7 +59,7 @@
 		EAC584C72BBDC123001BD988 /* Int + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC584C62BBDC123001BD988 /* Int + Extensions.swift */; };
 		EAC584C92BBDC6DB001BD988 /* ScaleFactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC584C82BBDC6DB001BD988 /* ScaleFactor.swift */; };
 		EAD7735F2BBF6622005F27B6 /* ImageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD7735E2BBF6622005F27B6 /* ImageDetailViewController.xib */; };
-		EAD773612BBF66FF005F27B6 /* ImageDetailVoduleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD773602BBF66FF005F27B6 /* ImageDetailVoduleConfigurator.swift */; };
+		EAD773612BBF66FF005F27B6 /* ImageDetailModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD773602BBF66FF005F27B6 /* ImageDetailModuleConfigurator.swift */; };
 		EAEAE4DE2BC4802400D78F2D /* InfoPlistWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEAE4DD2BC4802400D78F2D /* InfoPlistWrappers.swift */; };
 /* End PBXBuildFile section */
 
@@ -109,7 +108,6 @@
 		EA5B1BB72BB9ED8400245FBC /* ImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModel.swift; sourceTree = "<group>"; };
 		EA5B1BB92BB9EF3A00245FBC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EA637BC22BBC9DB800EB3FB7 /* BenchTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchTimer.swift; sourceTree = "<group>"; };
-		EA637BC42BBCA81C00EB3FB7 /* ImageDownloadProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadProvider.swift; sourceTree = "<group>"; };
 		EA637BC92BBCB47400EB3FB7 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		EA637BCB2BBCB59200EB3FB7 /* ImageGalleryModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryModuleConfigurator.swift; sourceTree = "<group>"; };
 		EA637BCD2BBCB8C300EB3FB7 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
@@ -147,7 +145,7 @@
 		EAC584C62BBDC123001BD988 /* Int + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Extensions.swift"; sourceTree = "<group>"; };
 		EAC584C82BBDC6DB001BD988 /* ScaleFactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleFactor.swift; sourceTree = "<group>"; };
 		EAD7735E2BBF6622005F27B6 /* ImageDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDetailViewController.xib; sourceTree = "<group>"; };
-		EAD773602BBF66FF005F27B6 /* ImageDetailVoduleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailVoduleConfigurator.swift; sourceTree = "<group>"; };
+		EAD773602BBF66FF005F27B6 /* ImageDetailModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailModuleConfigurator.swift; sourceTree = "<group>"; };
 		EAEAE4DD2BC4802400D78F2D /* InfoPlistWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPlistWrappers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -217,7 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				EA23D5F12BBB26890070E423 /* UnsplashProvider.swift */,
-				EA637BC42BBCA81C00EB3FB7 /* ImageDownloadProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -351,7 +348,7 @@
 		EA5B1BB22BB9ECCB00245FBC /* ImageDetailScreen */ = {
 			isa = PBXGroup;
 			children = (
-				EAD773602BBF66FF005F27B6 /* ImageDetailVoduleConfigurator.swift */,
+				EAD773602BBF66FF005F27B6 /* ImageDetailModuleConfigurator.swift */,
 				EA5B1BB32BB9ECF100245FBC /* ImageDetailViewController.swift */,
 				EAD7735E2BBF6622005F27B6 /* ImageDetailViewController.xib */,
 				EA5B1BB72BB9ED8400245FBC /* ImageDetailViewModel.swift */,
@@ -727,12 +724,11 @@
 				EA5B1BB82BB9ED8400245FBC /* ImageDetailViewModel.swift in Sources */,
 				EAC584BC2BBDBED3001BD988 /* UICollectionView + Extensions.swift in Sources */,
 				EAC584C92BBDC6DB001BD988 /* ScaleFactor.swift in Sources */,
-				EAD773612BBF66FF005F27B6 /* ImageDetailVoduleConfigurator.swift in Sources */,
+				EAD773612BBF66FF005F27B6 /* ImageDetailModuleConfigurator.swift in Sources */,
 				EA2635422BC1D83700B4EAC4 /* CoreDataService.swift in Sources */,
 				EA286C032BC1FF9C0029C480 /* CGFloat + Extensions.swift in Sources */,
 				EA286C072BC211010029C480 /* LikeButton.swift in Sources */,
 				EA8198132BBB466700CFBCFE /* UnsplashModels.swift in Sources */,
-				EA637BC52BBCA81C00EB3FB7 /* ImageDownloadProvider.swift in Sources */,
 				EAC584C02BBDBF65001BD988 /* NibBased.swift in Sources */,
 				EA8BCF3F2BC1F6DB00CAE0DA /* Page.swift in Sources */,
 				EA5B1BAA2BB98C3B00245FBC /* Constants.swift in Sources */,

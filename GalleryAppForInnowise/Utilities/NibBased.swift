@@ -7,8 +7,6 @@
 
 import UIKit
 
-// swiftlint:disable all
-
 // MARK: - NibBased
 
 protocol NibBased {
@@ -29,6 +27,7 @@ extension NibBased where Self: UIView {
     }
 
     static func instantiate() -> Self {
+        // swiftlint:disable:next force_cast
         return Bundle.main.loadNibNamed(nibName, owner: self, options: nil)?.first as! Self
     }
 }
@@ -44,5 +43,3 @@ extension NibBased where Self: UICollectionViewCell {
         UINib(nibName: String(describing: self), bundle: nil)
     }
 }
-
-// swiftlint:enable all

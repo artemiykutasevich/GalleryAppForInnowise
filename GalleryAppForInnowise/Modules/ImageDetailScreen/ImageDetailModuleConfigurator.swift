@@ -1,5 +1,5 @@
 //
-//  ImageDetailVoduleConfigurator.swift
+//  ImageDetailModuleConfigurator.swift
 //  GalleryAppForInnowise
 //
 //  Created by Artem Kutasevich on 5.04.24.

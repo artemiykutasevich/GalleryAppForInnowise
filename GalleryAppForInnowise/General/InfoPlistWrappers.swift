@@ -7,7 +7,7 @@
 
 import Foundation
 
-class InfoPlistWrappers {
+final class InfoPlistWrappers {
 
     // Unsplash
     #warning("Add your unsplash access key in info.plist")
