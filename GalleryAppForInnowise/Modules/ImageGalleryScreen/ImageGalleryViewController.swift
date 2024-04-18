@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 // MARK: - ImageGalleryViewControllerProtocol
 
@@ -31,6 +33,7 @@ final class ImageGalleryViewController: BaseViewController, ImageGalleryViewCont
     }()
 
     var viewModel: ImageGalleryViewModelProtocol!
+    private let disposeBag = DisposeBag()
 
     // override
 
@@ -38,14 +41,6 @@ final class ImageGalleryViewController: BaseViewController, ImageGalleryViewCont
         super.viewDidLoad()
         configureOutlets()
         configureCollectionView()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        viewModel.loadPage { [weak self] success in
-            guard let self else { return }
-            pageLoadingHandler(success: success)
-        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -56,15 +51,30 @@ final class ImageGalleryViewController: BaseViewController, ImageGalleryViewCont
     // Functions
 
     private func configureOutlets() {
-        likeButton.configure(isLiked: viewModel.isLiked)
-        likeButton.addTarget(self, action: #selector(likeButtonAction), for: .touchUpInside)
+        likeButton.isHidden = true
+//        likeButton.configure(isLiked: viewModel.isLiked)
+//        likeButton.addTarget(self, action: #selector(likeButtonAction), for: .touchUpInside)
     }
 
     private func configureCollectionView() {
-        collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.collectionViewLayout = collectionViewLayout
         collectionView.register(ImageGalleryCell.self)
+
+        viewModel.pages
+            .bind(to: collectionView.rx.items(
+                cellIdentifier: ImageGalleryCell.defaultReuseIdentifier,
+                cellType: ImageGalleryCell.self)
+            ) {_, _, _ in }
+            .disposed(by: disposeBag)
+
+        collectionView.rx.willDisplayCell
+            .observe(on: MainScheduler.instance)
+            .subscribe { [weak self] cell, indexPath in
+                guard let self, let cell = cell as? ImageGalleryCell else { return }
+                cell.configure(with: viewModel.pages.value[indexPath.item])
+            }
+            .disposed(by: disposeBag)
     }
 
     private func calculateCellWidth() -> CGFloat {
@@ -79,59 +89,32 @@ final class ImageGalleryViewController: BaseViewController, ImageGalleryViewCont
         return cellWidth
     }
 
-    private func pageLoadingHandler(success: Bool) {
-        if success {
-            collectionView.reloadData()
-        } else {
-            let service: AlertRouterProtocol = serviceLocator.getService()
-            service.openWarningAlert(of: .pageLoading)
-        }
-    }
-
     // @objc Functions
 
-    @objc private func likeButtonAction() {
-        TapticEngine.select()
-        viewModel.isLiked.toggle()
-        likeButton.configure(isLiked: viewModel.isLiked)
-        collectionView.reloadData()
-    }
+//    @objc private func likeButtonAction() {
+//        TapticEngine.select()
+//        viewModel.isLiked.toggle()
+//        likeButton.configure(isLiked: viewModel.isLiked)
+//        collectionView.reloadData()
+//    }
 }
 
 // MARK: - Collection View
 
-extension ImageGalleryViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.pages.count
-    }
-
-    // swiftlint:disable:next line_length
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let item = viewModel.pages[indexPath.row]
-        let cell: ImageGalleryCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
-        cell.configure(with: item)
-        return cell
-    }
-}
-
 extension ImageGalleryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         TapticEngine.select()
-        let pageItem = viewModel.pages[indexPath.item]
+        let pageItem = viewModel.pages.value[indexPath.item]
         let mainRouter: MainRouterProtocol = serviceLocator.getService()
         mainRouter.showImageDetailScreen(with: pageItem)
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        viewModel.checkIfNeedToLoadNextPage(scrollView) { [weak self] success in
-            guard let self else { return }
-            pageLoadingHandler(success: success)
-        }
+        viewModel.checkIfNeedToLoadNextPage(scrollView)
     }
 }
 
 extension ImageGalleryViewController: UICollectionViewDelegateFlowLayout {
-    // swiftlint:disable:next line_length
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return Defaults.CollectionView.insertForSections
     }
@@ -148,17 +131,15 @@ extension ImageGalleryViewController: PinterestLayoutDelegate {
         return .zero
     }
 
-    // swiftlint:disable:next line_length
     func collectionView(collectionView: UICollectionView, heightForImageAtIndexPath indexPath: IndexPath, withWidth: CGFloat) -> CGFloat {
-        let item = viewModel.pages[indexPath.item]
+        let item = viewModel.pages.value[indexPath.item]
         let imageAspect: CGFloat = item.size.height / item.size.width
         let cellWidth: CGFloat = calculateCellWidth()
         return cellWidth * imageAspect
     }
 
-    // swiftlint:disable:next line_length
     func collectionView(collectionView: UICollectionView, heightForAnnotationAtIndexPath indexPath: IndexPath, withWidth: CGFloat) -> CGFloat {
-        return 0
+        return .zero
     }
 }
 

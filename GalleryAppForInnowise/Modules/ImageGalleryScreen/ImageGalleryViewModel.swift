@@ -6,68 +6,68 @@
 //
 
 import UIKit
-import Combine
+import RxSwift
+import RxRelay
 
 // MARK: - ImageGalleryViewModelProtocol
 
 protocol ImageGalleryViewModelProtocol {
-    var currentPage: Int { get set }
-    var isLoading: Bool { get set }
-    var pages: Page { get }
-    var isLiked: Bool { get set }
+    var currentPage: BehaviorRelay<Int> { get }
+    var pages: BehaviorRelay<[PageItem]> { get }
+    var scrollEnded: BehaviorRelay<Void> { get }
 
-    func loadPage(completion success: @escaping (Bool) -> Void)
-    func checkIfNeedToLoadNextPage(_ scrollView: UIScrollView, completion success: @escaping (Bool) -> Void)
+    func checkIfNeedToLoadNextPage(_ scrollView: UIScrollView)
 }
 
 // MARK: - ImageGalleryViewModel
 
 final class ImageGalleryViewModel {
-    var currentPage: Int = 0
-    var isLoading: Bool = false
-    var pages: Page {
-        get { isLiked ? likedPages : downloadedPages }
-    }
+    var currentPage: BehaviorRelay = BehaviorRelay(value: 0)
+    var pages: BehaviorRelay<[PageItem]> = BehaviorRelay(value: [])
+    var scrollEnded: BehaviorRelay<Void> = BehaviorRelay(value: ())
 
-    var isLiked: Bool = false
+    private let disposeBag = DisposeBag()
+    private let baseProvider: BaseProviderProtocol = serviceLocator.getService()
 
-    var downloadedPages: Page = []
-
-    lazy var coreDataService: CoreDataServiceProtocol = serviceLocator.getService()
-
-    var likedPages: Page {
-        get { coreDataService.getFavorites().filter({ $0.isFavorite }) }
+    init() {
+        loadPage(currentPage.value)
+        bindScroolEnded()
     }
 }
 
 extension ImageGalleryViewModel: ImageGalleryViewModelProtocol {
-    func loadPage(completion success: @escaping (Bool) -> Void) {
-        guard !isLoading, !isLiked else { return }
-        isLoading = true
-        let provider: BaseProviderProtocol = serviceLocator.getService()
-        provider.getPage(with: currentPage) { [weak self] result in
+    func loadPage(_ pageNumber: Int) {
+        baseProvider.getPage(with: pageNumber) { [weak self] result in
             guard let self else { return }
             switch result {
             case .success(let newPages):
-                downloadedPages.append(contentsOf: newPages.toPage())
-                currentPage += 1
-                success(true)
+                debugPrint("✅ page downloading success")
+                pages.accept(pages.value + newPages.toPage())
             case .failure(let failure):
                 debugPrint("❌ page downloading error: \(failure.localizedDescription)")
-                success(false)
             }
-            isLoading = false
         }
     }
 
-    func checkIfNeedToLoadNextPage(_ scrollView: UIScrollView, completion success: @escaping (Bool) -> Void) {
-        guard !isLiked else { return }
+    func bindScroolEnded() {
+        scrollEnded
+            .subscribe { [weak self] _ in
+                guard let self else { return }
+                let newPageNumber = currentPage.value + 1
+                currentPage.accept(newPageNumber)
+                loadPage(newPageNumber)
+            }
+            .disposed(by: disposeBag)
+    }
+
+    func checkIfNeedToLoadNextPage(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
         let height = scrollView.frame.size.height
         if offsetY > contentHeight - height {
-            // Load next page when user reaches the bottom
-            loadPage(completion: success)
+            let newPageNumber = currentPage.value + 1
+            currentPage.accept(newPageNumber)
+            loadPage(newPageNumber)
         }
     }
 }
